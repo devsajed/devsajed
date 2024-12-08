@@ -1,0 +1,51 @@
+@import "../base/variables";
+.header-area {
+  .logo {
+    a {
+      display: inline-block;
+      font-size: 32px;
+      line-height: 46px;
+      text-transform: capitalize;
+      font-weight: 700;
+      color: $color-black;
+      font-family: lora;
+      font-style: italic;
+    }
+  }
+  .menu {
+    li {
+      margin: 0 25px;
+      a {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-black;
+        font-weight: 500;
+        &:hover {
+          color: $color-hover;
+        }
+      }
+    }
+  }
+
+  .contact-btn {
+    li {
+      .btn {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        color: $color-white;
+        padding: 9px 13px;
+        background: $color-accent;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        &:hover {
+          background: transparent;
+          color: $color-black;
+          border: 2px solid $color-accent;
+        }
+      }
+    }
+  }
+}

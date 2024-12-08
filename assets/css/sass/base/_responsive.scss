@@ -1,0 +1,35 @@
+@mixin x-small {
+	@media (max-width: $grid_breakpoint_xs) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media (max-width: $grid_breakpoint_sm) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (max-width: $grid_breakpoint_md) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (max-width: $grid_breakpoint_lg) {
+		@content;
+	}
+}
+
+@mixin x-large {
+	@media (max-width: $grid_breakpoint_xl) {
+		@content;
+	}
+}
+
+@mixin xx-large {
+	@media (max-width: $grid_breakpoint_xxl) {
+		@content;
+	}
+}

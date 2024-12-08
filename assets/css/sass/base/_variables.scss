@@ -1,0 +1,23 @@
+// Colors
+$color-primary: #1A73E8; // Blue
+$color-accent: #F9A825;  // Yellow-Orange
+$color-bg: #F5F5F5;      // Light Gray
+$color-text: #333333;    // Dark Gray
+$color-white: #FFFFFF;
+$color-black:#000000;
+$color-hover:#E65100;
+$transition-speed: 0.3s;
+// Typography
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Roboto', sans-serif;
+
+// Grid variables 
+$columns: 12;
+$grid_breakpoint_xxl: 1400px;
+$grid_breakpoint_xl: 1200px;
+$grid_breakpoint_lg: 992px;
+$grid_breakpoint_md: 768px;
+$grid_breakpoint_sm: 576px;
+$grid_breakpoint_xs: 575.95px;
+/* Margin & Padding Utilities */
+$spacing-unit: 10px;

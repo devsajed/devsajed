@@ -1,0 +1,63 @@
+@import '../base/variables';
+// Display (Flex & Inline-Flex)
+$flexs: flex, inline-flex;
+
+@each $flex in $flexs {
+  .d-#{$flex} {
+    display: $flex;
+  }
+}
+
+// Flex Direction (row, row-reverse, column, column-reverse)
+$directions: row, row-reverse, column, column-reverse;
+
+@each $direction in $directions {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+// Justify Content (flex-start, center, flex-end, space-between, space-around, space-evenly)
+$justifys: flex-start, center, flex-end, space-between, space-around, space-evenly;
+
+@each $justify in $justifys {
+  .justify-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+// Align Content (flex-start, center, flex-end, space-between, space-around, space-evenly)
+$aligns: flex-start, center, flex-end, space-between, space-around, space-evenly;
+
+@each $align in $aligns {
+  .align-#{$align} {
+    align-content: $align;
+  }
+}
+
+// Flex Wrap (nowrap, wrap, wrap-reverse)
+$wraps: nowrap, wrap, wrap-reverse;
+
+@each $wrap in $wraps {
+  .flex-#{$wrap} {
+    flex-wrap: $wrap;
+  }
+}
+
+// Align Items (flex-start, center, flex-end)
+$aligns1: flex-start, center, flex-end;
+
+@each $align1 in $aligns1 {
+  .align-#{$align1} {
+    align-items: $align1;
+  }
+}
+
+// Position (fixed, static, relative, absolute)
+$positions: fixed, static, relative, absolute;
+
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position;
+  }
+}
