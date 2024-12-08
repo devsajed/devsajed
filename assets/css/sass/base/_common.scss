@@ -1,4 +1,6 @@
 @import "../base/variables";
+@import "../base/responsive";
+
 // button
 .btn {
   display: inline-block;
@@ -40,6 +42,7 @@
     text-transform: capitalize;
     color: $color-black;
     position: relative;
+    
     &:before {
       content: "";
       position: absolute;
@@ -48,10 +51,13 @@
       background: $color-hover;
       bottom: 0;
       transform: translate(80px, 15px);
+      @include small{
+        transform: translate(44px, 15px);
+      }
     }
     @include small{
-      font-size: 26px;
-      line-height: 32px;
+      font-size: 32px;
+      line-height: 39px;
     }
   }
 }

@@ -72,6 +72,17 @@ img {
   bottom: 0;
   transform: translate(80px, 15px);
 }
+@media (max-width: 576px) {
+  .section-title h4:before {
+    transform: translate(44px, 15px);
+  }
+}
+@media (max-width: 576px) {
+  .section-title h4 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
 
 /* Margin & Padding Utilities */
 .container {
@@ -1546,12 +1557,6 @@ h2 {
 .header-area .menu li a:hover {
   color: #E65100;
 }
-@media (max-width: 576px) {
-  .header-area {
-    visibility: hidden;
-    display: none;
-  }
-}
 
 /* Margin & Padding Utilities */
 .banner-area {
@@ -1617,21 +1622,14 @@ h2 {
     font-size: 14px;
   }
 }
+.banner-area .banners .button a {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
 
 /* Margin & Padding Utilities */
 .about-area .about-img img {
   border-radius: 8px;
-}
-@media (max-width: 992px) {
-  .about-area .about-img img {
-    width: 300px;
-  }
-}
-@media (max-width: 576px) {
-  .about-area .about-img img {
-    display: flex;
-    justify-content: center;
-  }
 }
 .about-area .about-content p {
   font-size: 19px;
@@ -1652,28 +1650,63 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.about-area .about-card img {
+  width: 50px;
+  margin-bottom: 16px;
+}
 .about-area .about-card h5 {
   font-size: 23px;
   line-height: 38px;
   text-transform: capitalize;
-  padding: 5px 0;
   color: #000000;
-  transition: color 0.3s ease;
 }
 .about-area .about-card p {
-  padding: 11px 0px;
-  font-size: 21px;
-  line-height: 28px;
   text-transform: capitalize;
-  transition: color 0.3s ease;
 }
 .about-area .about-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 2px 8px #F9A825;
+  box-shadow: 0 2px 8px rgba(5, 1, 1, 0.603);
   color: #004a99;
 }
 @media (max-width: 576px) {
   .about-area .about-card {
     margin-top: 20px;
   }
+}
+@media (max-width: 768px) {
+  .about-area .about-card {
+    margin-top: 20px;
+  }
+}
+
+.service-area .service-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-area .service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+.service-area .service-card h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+.service-area .service-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.service-area .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.service-area .service-card:hover h5 {
+  color: #0056b3;
 }/*# sourceMappingURL=style.css.map */
