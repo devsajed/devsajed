@@ -20,6 +20,12 @@ a {
   color: #333333;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
 /* Margin & Padding Utilities */
 .btn {
   display: inline-block;
@@ -41,6 +47,30 @@ a {
 .btn:focus {
   outline: none;
   box-shadow: 0 0 5px #673ab7;
+}
+
+.section-title span {
+  display: block;
+  font-size: 21px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.section-title h4 {
+  font-size: 45px;
+  line-height: 56px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #000000;
+  position: relative;
+}
+.section-title h4:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 6px;
+  background: #E65100;
+  bottom: 0;
+  transform: translate(80px, 15px);
 }
 
 /* Margin & Padding Utilities */
@@ -1516,10 +1546,16 @@ h2 {
 .header-area .menu li a:hover {
   color: #E65100;
 }
+@media (max-width: 576px) {
+  .header-area {
+    visibility: hidden;
+    display: none;
+  }
+}
 
 /* Margin & Padding Utilities */
 .banner-area {
-  background: linear-gradient(135deg, #2196f3, #e91e63);
+  background: #FFFFFF;
 }
 .banner-area .banners .profile {
   text-align: center;
@@ -1532,7 +1568,7 @@ h2 {
 }
 .banner-area .banners .type-writer h1 {
   font-size: 40px;
-  color: #FFFFFF;
+  color: #000000;
   text-transform: capitalize;
 }
 .banner-area .banners .type-writer h1 .typewriter-role {
@@ -1563,8 +1599,81 @@ h2 {
   margin: 0 auto;
   color: #000000;
 }
+@media (max-width: 576px) {
+  .banner-area .banners .banner-content h3 {
+    font-size: 29px;
+    line-height: 40px;
+    max-width: 100%;
+  }
+}
 .banner-area .banners .banner-content p {
   max-width: 700px;
   padding-top: 20px;
-  color: #ffc107;
+}
+@media (max-width: 576px) {
+  .banner-area .banners .banner-content p {
+    max-width: 100%;
+    padding-top: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Margin & Padding Utilities */
+.about-area .about-img img {
+  border-radius: 8px;
+}
+@media (max-width: 992px) {
+  .about-area .about-img img {
+    width: 300px;
+  }
+}
+@media (max-width: 576px) {
+  .about-area .about-img img {
+    display: flex;
+    justify-content: center;
+  }
+}
+.about-area .about-content p {
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000000;
+}
+@media (max-width: 576px) {
+  .about-area .about-content p {
+    padding: 10px;
+  }
+}
+.about-area .about-card {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-area .about-card h5 {
+  font-size: 23px;
+  line-height: 38px;
+  text-transform: capitalize;
+  padding: 5px 0;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+.about-area .about-card p {
+  padding: 11px 0px;
+  font-size: 21px;
+  line-height: 28px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+.about-area .about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 8px #F9A825;
+  color: #004a99;
+}
+@media (max-width: 576px) {
+  .about-area .about-card {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

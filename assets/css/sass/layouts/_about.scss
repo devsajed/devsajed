@@ -1,0 +1,62 @@
+@import "../base/variables";
+
+.about-area {
+  .about-img {
+    img {
+      border-radius: 8px;
+      @include large{
+        width: 300px;
+      }
+      @include small{
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .about-content {
+    p {
+      font-size: 19px;
+      line-height: 28px;
+      font-weight: 500;
+      color: $color-black;
+      @include small{
+        padding: 10px;
+      }
+    }
+  }
+  .about-card {
+    background: $card-bg;
+    border: 1px solid $card-border;
+    border-radius: 8px;
+    padding: 20px;
+    // text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    h5 {
+      font-size: 23px;
+      line-height: 38px;
+      text-transform: capitalize;
+      padding: 5px 0;
+      color: $color-black;
+      // color: $text-hover-color;
+      transition: color 0.3s ease;
+    }
+
+    p {
+      padding: 11px 0px;
+      font-size: 21px;
+      line-height: 28px;
+      text-transform: capitalize;
+      transition: color 0.3s ease;
+    }
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 2px 8px $color-accent;
+      color: darken($text-hover-color, 20%);
+    }
+    @include small{
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import "../base/variables";
 .banner-area {
-   background: linear-gradient(135deg, #2196f3 , #e91e63 );
+  background: $color-white;
   .banners {
     .profile {
       text-align: center;
@@ -14,12 +14,11 @@
     .type-writer {
       h1 {
         font-size: 40px;
-        color: $color-white;
+        color: $color-black;
         text-transform: capitalize;
         .typewriter-role {
           display: inline-block;
           font-family: "lora", sans-serif;
-          // white-space: nowrap;
           border-bottom: 2px solid;
           &.developer {
             color: $color-accent;
@@ -47,11 +46,26 @@
         text-align: center;
         margin: 0 auto;
         color: $color-black;
+        @include small {
+          font-size: 29px;
+          line-height: 40px;
+          max-width: 100%;
+        }
       }
       p {
         max-width: 700px;
         padding-top: 20px;
-        color: #ffc107;
+        @include small {
+          max-width: 100%;
+          padding-top: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+    .button {
+      a {
+        margin-bottom: 10px;
+        margin-left: 20px;
       }
     }
   }

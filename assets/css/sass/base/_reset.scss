@@ -17,3 +17,8 @@ a{
   transition: .3s;
   color: $color-text;
 }
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}

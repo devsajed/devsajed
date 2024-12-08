@@ -27,4 +27,8 @@
       
     }
   }
+  @include small{
+    visibility: hidden;
+    display:none;
+  }
 }

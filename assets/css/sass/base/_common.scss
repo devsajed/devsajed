@@ -1,12 +1,12 @@
-@import '../base/variables';
-
-.btn{
+@import "../base/variables";
+// button
+.btn {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: $color-white !important;
-  background: linear-gradient(135deg, #ff5722, #673ab7);
+  background: linear-gradient(135deg, $light-orange, $color-indigo);
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -14,12 +14,44 @@
   transition: background 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background: linear-gradient(135deg, #673ab7, #ff5722);
+    background: linear-gradient(135deg, $color-indigo, $light-orange);
     transform: scale(1.05);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 5px #673ab7;
+    box-shadow: 0 0 5px $color-indigo;
+  }
+}
+
+// section title
+
+.section-title {
+  span {
+    display: block;
+    font-size: 21px;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 45px;
+    line-height: 56px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $color-black;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 6px;
+      background: $color-hover;
+      bottom: 0;
+      transform: translate(80px, 15px);
+    }
+    @include small{
+      font-size: 26px;
+      line-height: 32px;
+    }
   }
 }
