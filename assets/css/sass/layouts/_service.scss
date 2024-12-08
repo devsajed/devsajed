@@ -1,11 +1,13 @@
+@import '../base/variables';
 .service-area {
+  background-color: $color-white;
   .service-card {
     text-align: center;
-    background: #fff;
+    background: $card-bg;
     border-radius: 10px;
     padding: 20px;
     margin: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.199);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     img {
@@ -18,12 +20,12 @@
       font-size: 1.25rem;
       font-weight: bold;
       margin-bottom: 10px;
-      color: #007bff;
+      color: $text-hover-color;
     }
 
     p {
       font-size: 0.95rem;
-      color: #555;
+      // color: #555;
     }
 
     &:hover {

@@ -52,3 +52,61 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start typing effect
   typeWriter();
 });
+
+// isotop 
+// Wait for the DOM to be fully loaded before executing the code
+document.addEventListener('DOMContentLoaded', function () {
+  // Select the grid container
+  var grid = document.querySelector('.grid');
+
+  // Initialize Isotope
+  var iso = new Isotope(grid, {
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows', // Use fitRows layout
+  });
+
+  // Get all filter buttons
+  var filters = document.querySelectorAll('.controls .btn');
+
+  // Add event listeners to each filter button
+  filters.forEach(function (filter) {
+    filter.addEventListener('click', function () {
+      // Get the filter value from the clicked button's data-filter attribute
+      var filterValue = this.getAttribute('data-filter');
+
+      // Apply the filter using Isotope's arrange method
+      iso.arrange({
+        filter: filterValue
+      });
+
+      // Remove active class from all buttons and add it to the clicked button
+      filters.forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+});
+
+// isotop 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.querySelector('.filltering');
+  var iso = new Isotope(grid, {
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows',
+  });
+
+  // Filter items on button click
+  var filters = document.querySelectorAll('.controls .btn');
+  filters.forEach((filter) =>
+    filter.addEventListener('click', function () {
+      var filterValue = this.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+
+      // Update active button
+      filters.forEach((btn) => btn.classList.remove('active'));
+      this.classList.add('active');
+    })
+  );
+});
