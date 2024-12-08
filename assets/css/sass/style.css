@@ -21,6 +21,29 @@ a {
 }
 
 /* Margin & Padding Utilities */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF !important;
+  background: linear-gradient(135deg, #ff5722, #673ab7);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  background: linear-gradient(135deg, #673ab7, #ff5722);
+  transform: scale(1.05);
+}
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px #673ab7;
+}
+
+/* Margin & Padding Utilities */
 .container {
   margin: auto;
   width: 100%;
@@ -1483,9 +1506,6 @@ h2 {
   font-family: lora;
   font-style: italic;
 }
-.header-area .menu li {
-  margin: 0 25px;
-}
 .header-area .menu li a {
   display: inline-block;
   font-size: 18px;
@@ -1496,19 +1516,55 @@ h2 {
 .header-area .menu li a:hover {
   color: #E65100;
 }
-.header-area .contact-btn li .btn {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 600;
-  color: #FFFFFF;
-  padding: 9px 13px;
-  background: #F9A825;
-  border: 2px solid transparent;
-  border-radius: 8px;
+
+/* Margin & Padding Utilities */
+.banner-area {
+  background: linear-gradient(135deg, #2196f3, #e91e63);
 }
-.header-area .contact-btn li .btn:hover {
-  background: transparent;
+.banner-area .banners .profile {
+  text-align: center;
+}
+.banner-area .banners .profile img {
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #F9A825;
+}
+.banner-area .banners .type-writer h1 {
+  font-size: 40px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.banner-area .banners .type-writer h1 .typewriter-role {
+  display: inline-block;
+  font-family: "lora", sans-serif;
+  border-bottom: 2px solid;
+}
+.banner-area .banners .type-writer h1 .typewriter-role.developer {
+  color: #F9A825;
+}
+.banner-area .banners .type-writer h1 .typewriter-role.designer {
+  color: #E65100;
+}
+.banner-area .banners .type-writer h1 .typewriter-role.ux-designer {
+  color: #1A73E8;
+}
+@media (max-width: 576px) {
+  .banner-area .banners .type-writer h1 {
+    font-size: 18px;
+  }
+}
+.banner-area .banners .banner-content h3 {
+  font-size: 66px;
+  line-height: 70px;
+  font-family: loral;
+  max-width: 711px;
+  text-align: center;
+  margin: 0 auto;
   color: #000000;
-  border: 2px solid #F9A825;
+}
+.banner-area .banners .banner-content p {
+  max-width: 700px;
+  padding-top: 20px;
+  color: #ffc107;
 }/*# sourceMappingURL=style.css.map */

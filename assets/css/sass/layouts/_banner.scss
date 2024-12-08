@@ -1,0 +1,58 @@
+@import "../base/variables";
+.banner-area {
+   background: linear-gradient(135deg, #2196f3 , #e91e63 );
+  .banners {
+    .profile {
+      text-align: center;
+      img {
+        width: 130px;
+        border-radius: 50%;
+        padding: 3px;
+        background: $color-accent;
+      }
+    }
+    .type-writer {
+      h1 {
+        font-size: 40px;
+        color: $color-white;
+        text-transform: capitalize;
+        .typewriter-role {
+          display: inline-block;
+          font-family: "lora", sans-serif;
+          // white-space: nowrap;
+          border-bottom: 2px solid;
+          &.developer {
+            color: $color-accent;
+          }
+
+          &.designer {
+            color: $color-hover;
+          }
+
+          &.ux-designer {
+            color: $color-primary;
+          }
+        }
+        @include small {
+          font-size: 18px;
+        }
+      }
+    }
+    .banner-content {
+      h3 {
+        font-size: 66px;
+        line-height: 70px;
+        font-family: loral;
+        max-width: 711px;
+        text-align: center;
+        margin: 0 auto;
+        color: $color-black;
+      }
+      p {
+        max-width: 700px;
+        padding-top: 20px;
+        color: #ffc107;
+      }
+    }
+  }
+}

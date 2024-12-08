@@ -14,7 +14,6 @@
   }
   .menu {
     li {
-      margin: 0 25px;
       a {
         display: inline-block;
         font-size: 18px;
@@ -25,27 +24,7 @@
           color: $color-hover;
         }
       }
-    }
-  }
-
-  .contact-btn {
-    li {
-      .btn {
-        display: inline-block;
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 600;
-        color: $color-white;
-        padding: 9px 13px;
-        background: $color-accent;
-        border: 2px solid transparent;
-        border-radius: 8px;
-        &:hover {
-          background: transparent;
-          color: $color-black;
-          border: 2px solid $color-accent;
-        }
-      }
+      
     }
   }
 }

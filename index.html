@@ -1,44 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>devsajed</title>
-  <link rel="icon" href="assets/img/icon-devsajed.png" >
-<!-- Font Awesome Css  -->
- <link rel="stylesheet" href="assets/css/plugins/font-awesome/css/fontawsome.min.css">
-  <!-- Main css  -->
-   <link rel="stylesheet" href="assets/css/sass/style.css">
+
+  <!-- Title of the webpage -->
+  <title>Devsajed - Web Developer Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Devsajed is a professional web developer with expertise in front-end development, web design, and coding. Explore my portfolio showcasing web projects, skills, and technologies.">
+  <meta name="keywords"
+    content="web developer, portfolio, front-end development, HTML, CSS, JavaScript, Sass, GitHub, coding, web design">
+  <meta name="author" content="Devsajed">
+
+  <!-- Social Media Meta Tags (Open Graph / Twitter Cards) -->
+  <meta property="og:title" content="Devsajed - Web Developer Portfolio">
+  <meta property="og:description"
+    content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design.">
+  <meta property="og:image" content="assets/img/icon-devsajed.png">
+  <meta property="og:url" content="https://www.devsajed.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devsajed - Web Developer Portfolio">
+  <meta name="twitter:description"
+    content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design.">
+  <meta name="twitter:image" content="assets/img/icon-devsajed.png">
+  <meta name="twitter:creator" content="@Devsajed">
+
+  <!-- Link to Favicon -->
+  <link rel="icon" href="assets/img/icon-img/icon-devsajed.png">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/font-awesome/css/fontawesome.min.css">
+
+  <!-- Main CSS (Sass compiled) -->
+  <link rel="stylesheet" href="assets/css/sass/style.css">
+
+  <!-- Additional Meta Tags (Optional) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
 </head>
+
+
 <body>
   <!-- Header Area  -->
-  <Header id="header" class="header-area pb-3">
+  <Header id="header" class="header-area ">
     <div class="container">
       <div class="row align-center py-1">
-        <div class=" col-md-2">
-          <div class="logo" >
+        <!-- logo Area -->
+        <div class=" col-md-4">
+          <div class="logo">
             <a href="#">sajed.</a>
           </div>
         </div>
-        <div class=" col-md-8 " >
-          <nav class="d-flex justify-center">
-            <ul class="menu d-flex">
-              <li class=""><a class=" text-capitalize" href="#header">home</a></li>
-              <li class=""><a class=" text-capitalize" href="#about">about </a></li>
-              <li class=""><a class=" text-capitalize" href="#service">service</a></li>
-              <li class=""><a class=" text-capitalize" href="#portfolio">portfolio</a></li>
+        <!-- /logo Area -->
+
+        <!-- Header Menu Area  -->
+        <div class=" col-md-8 ">
+          <nav >
+            <ul class="menu text-center d-flex align-center">
+              <li class="ml-2 mr-2"><a class=" text-capitalize" href="#header">home</a></li>
+              <li class="ml-2 mr-2"><a class=" text-capitalize" href="#about">about </a></li>
+              <li class="ml-2 mr-2"><a class=" text-capitalize" href="#service">service</a></li>
+              <li class="ml-2 mr-2"><a class=" text-capitalize" href="#portfolio">portfolio</a></li>
+              <li class="ml-auto "><a class=" btn text-capitalize" href="#contact">contact me </a></li>
             </ul>
           </nav>
         </div>
-        <div class="col-md-2">
-          <ul class="contact-btn d-flex justify-flex-end">
-            <li class=""><a class="btn text-capitalize" href="#contact">contact me </a></li>
-          </ul>
-        </div>
+        <!-- /Header Menu Area  -->
       </div>
     </div>
   </Header>
   <!-- /Header Area  -->
 
+  <!-- Main Area  -->
+  <main>
+
+    <!-- Banner Section Area  -->
+    <section class="banner-area py-3">
+      <div class="container">
+        <div class="row ">
+          <div class="col-12 col-sm-12 justify-center d-flex">
+            <div class="banners ">
+              <div class="profile">
+                <img src="assets/img/profile-img/sajed.jpg" alt="profile image">
+              </div>  
+              <div class="type-writer text-center">
+                <h1>I'm <span id="typewriter-text" class="typewriter-role"></span></h1>
+              </div>
+              <div class="banner-content text-center">
+                <h3>Frontend Web Developer Based In Bangladesh</h3>
+                <p class="m-auto text-capitalize">I am a frontend developer from Sylhet, Bangladesh with 1 years of experience in multiple companies.Proficient in HTML,
+                CSS, and JavaScript for creating responsive and interactive web pages.</p>
+              </div>
+              <div class="button text-center mt-2">
+                <a rel="noopener" href="https://github.com/devsajed" target="_blank" class="text-capitalize mr-3 btn" >github</a>
+                <a href="#" class="text-capitalize btn" target="_blank">github</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Banner Section Area  -->
+
+  </main>
+  <!-- /Main Area  -->
+
+  <!-- main js  -->
+   <script src="assets/js/index.js"></script>
 </body>
+
 </html>
