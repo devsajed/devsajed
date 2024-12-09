@@ -1,7 +1,48 @@
-@import '../base/variables';
+@import "../base/variables";
 
 .contact-area {
- 
+  .contact-location {
+    .social-links {
+      h5 {
+        font-size: 23px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: $color-black;
+      }
+      ul {
+        li {
+          a {
+            display: inline-block;
+            font-size: 25px;
+            background: $active-color;
+            padding: 3px 7px;
+            color: $color-white;
+            border-radius: 50%;
+            &:hover {
+              background: $color-hover;
+              // transition: 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    .location {
+      li {
+        i {
+          font-size: 38px;
+          line-height: 47px;
+          margin-right: 10px;
+          color: #b71540;
+        }
+        span {
+          display: block;
+          text-transform: capitalize;
+          word-spacing: 4px;
+        }
+      }
+    }
+  }
 
   .contact-form {
     max-width: 600px;
@@ -13,9 +54,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     h5 {
+      font-size: 21px;
       text-align: center;
       margin-bottom: 20px;
-      color: $color-text;
+      color: $color-black;
     }
 
     form {

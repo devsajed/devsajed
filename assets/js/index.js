@@ -1,3 +1,27 @@
+// Header js 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header-area');
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const menu = document.querySelector('.menu');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  
+  // Add sticky class on scroll
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) { // Change 100 to the scroll position you prefer
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+
+  // Toggle menu for small screens
+  toggleBtn.addEventListener('click', function() {
+    menu.classList.toggle('visible');
+    toggleBtn.classList.toggle('active');
+  });
+});
 
 
 // type writer js 
@@ -53,40 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWriter();
 });
 
-// isotop 
-// Wait for the DOM to be fully loaded before executing the code
-document.addEventListener('DOMContentLoaded', function () {
-  // Select the grid container
-  var grid = document.querySelector('.grid');
 
-  // Initialize Isotope
-  var iso = new Isotope(grid, {
-    itemSelector: '.portfolio-item',
-    layoutMode: 'fitRows', // Use fitRows layout
-  });
-
-  // Get all filter buttons
-  var filters = document.querySelectorAll('.controls .btn');
-
-  // Add event listeners to each filter button
-  filters.forEach(function (filter) {
-    filter.addEventListener('click', function () {
-      // Get the filter value from the clicked button's data-filter attribute
-      var filterValue = this.getAttribute('data-filter');
-
-      // Apply the filter using Isotope's arrange method
-      iso.arrange({
-        filter: filterValue
-      });
-
-      // Remove active class from all buttons and add it to the clicked button
-      filters.forEach(function (btn) {
-        btn.classList.remove('active');
-      });
-      this.classList.add('active');
-    });
-  });
-});
 
 // isotop 
 

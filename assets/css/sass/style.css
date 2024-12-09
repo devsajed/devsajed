@@ -1558,6 +1558,95 @@ h2 {
   color: #E65100;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 999;
+  }
+}
+.menu li {
+  margin: 0 10px;
+}
+@media (max-width: 768px) {
+  .menu li {
+    margin: 26px 0;
+  }
+}
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: capitalize;
+}
+.menu li.ml-auto {
+  margin-left: auto;
+}
+
+.toggle-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+}
+.toggle-btn .menu-icon {
+  display: inline;
+}
+.toggle-btn .close-icon {
+  display: none;
+}
+.toggle-btn.active .menu-icon {
+  display: none;
+}
+.toggle-btn.active .close-icon {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .menu.visible {
+    display: block;
+  }
+  .toggle-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+  }
+  .toggle-btn .menu-icon {
+    display: inline;
+  }
+  .toggle-btn .close-icon {
+    display: none;
+  }
+  .toggle-btn.active .menu-icon {
+    display: none;
+  }
+  .toggle-btn.active .close-icon {
+    display: inline;
+  }
+}
 /* Margin & Padding Utilities */
 .banner-area {
   background: #FFFFFF;
@@ -1787,6 +1876,34 @@ h2 {
 }
 
 /* Margin & Padding Utilities */
+.contact-area .contact-location .social-links h5 {
+  font-size: 23px;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: #000000;
+}
+.contact-area .contact-location .social-links ul li a {
+  display: inline-block;
+  font-size: 25px;
+  background: #007bff;
+  padding: 3px 7px;
+  color: #FFFFFF;
+  border-radius: 50%;
+}
+.contact-area .contact-location .social-links ul li a:hover {
+  background: #E65100;
+}
+.contact-area .contact-location .location li i {
+  font-size: 38px;
+  line-height: 47px;
+  margin-right: 10px;
+  color: #b71540;
+}
+.contact-area .contact-location .location li span {
+  display: block;
+  text-transform: capitalize;
+  word-spacing: 4px;
+}
 .contact-area .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -1797,9 +1914,10 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .contact-area .contact-form h5 {
+  font-size: 21px;
   text-align: center;
   margin-bottom: 20px;
-  color: #333333;
+  color: #000000;
 }
 .contact-area .contact-form form .form-group {
   margin-bottom: 15px;

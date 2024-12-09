@@ -24,8 +24,117 @@
           color: $color-hover;
         }
       }
-      
     }
   }
- 
+}
+// General Styling
+$primary-color: #333;
+$background-color: #fff;
+$toggle-btn-color: #000;
+$menu-bg-color: #fff; // Background color for the mobile menu
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: $background-color;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+// Logo Styling
+.logo a {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 1.5rem;
+}
+
+// Menu and Toggle Button Styles
+.menu {
+  @include medium {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0; // Adjust based on header height
+    right: 0;
+    width: 50%;
+    background-color: $menu-bg-color;
+    padding: 10px;
+    z-index: 999;
+  }
+  li {
+    margin: 0 10px;
+    @include medium {
+      margin: 26px 0;
+    }
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      text-transform: capitalize;
+    }
+
+    &.ml-auto {
+      margin-left: auto;
+    }
+  }
+}
+
+// Hide the menu and toggle on small screens
+.toggle-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: $primary-color;
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  &.active {
+    .menu-icon {
+      display: none;
+    }
+
+    .close-icon {
+      display: inline;
+    }
+  }
+}
+
+// Mobile Styles (max-width: 768px)
+@include medium {
+  .menu.visible {
+    display: block;
+  }
+
+  .toggle-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+
+    .menu-icon {
+      display: inline;
+    }
+
+    .close-icon {
+      display: none;
+    }
+
+    &.active {
+      .menu-icon {
+        display: none;
+      }
+
+      .close-icon {
+        display: inline;
+      }
+    }
+  }
 }
