@@ -1,0 +1,44 @@
+@import '../base/variables';
+.footer-area {
+  border-top: 1px solid $color-text;
+  padding: 1rem 0;
+
+  p {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: $color-black;
+    margin: 0;
+    @include x-small {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .social-links {
+    margin-top: 1rem;
+
+    ul {
+      gap: 10px; // Spacing between items
+      @include x-small {
+        justify-content: center;
+      }
+      li {
+        a {
+          background: $active-color;
+          padding: 8px;
+          color: $color-white;
+          font-size: 25px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background: $color-hover;
+          }
+        }
+      }
+    }
+  }
+}
+

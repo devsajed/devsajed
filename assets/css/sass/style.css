@@ -1,3 +1,4 @@
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
@@ -26,7 +27,134 @@ img {
   height: auto;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
+/* Mixin for Light and Dark Modes */
+/* Base Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #ffffff;
+  color: #000000;
+}
+body .header-area {
+  background-color: #f8f9fa;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode .header-area {
+  background-color: #1f1f1f;
+}
+
+/* Header Styles */
+.header-area {
+  background-color: #f8f9fa;
+}
+
+/* Button Styles */
+button {
+  background-color: #1A73E8;
+  color: #fff;
+}
+button:hover {
+  background-color: #E65100;
+}
+
+/* Card Styles */
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  margin: 15px;
+}
+.card:hover {
+  box-shadow: rgba(5, 1, 1, 0.603);
+}
+
+/* Utility Classes */
+.text-primary {
+  color: #1A73E8;
+}
+
+.text-accent {
+  color: #F9A825;
+}
+
+.bg-primary {
+  background-color: #1A73E8;
+}
+
+.bg-accent {
+  background-color: #F9A825;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px dotted #E65100;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.loaded .preloader {
+  display: none;
+}
+
+/* Styling for the Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  display: none;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #1A73E8;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+#scrollTopBtn:hover {
+  background-color: #ff5722;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #FFFFFF;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .btns {
   display: inline-block;
   padding: 10px 20px;
@@ -84,6 +212,7 @@ img {
   }
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .container {
   margin: auto;
@@ -1336,6 +1465,7 @@ img {
   padding-left: 100px;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .d-flex {
   display: flex;
@@ -1536,6 +1666,7 @@ h2 {
   text-align: justify;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .header-area .logo a {
   display: inline-block;
@@ -1547,106 +1678,74 @@ h2 {
   font-family: lora;
   font-style: italic;
 }
-.header-area .menu li a {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-  font-weight: 500;
-}
-.header-area .menu li a:hover {
-  color: #E65100;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
-}
-
 @media (max-width: 768px) {
-  .menu {
+  .header-area .menu {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
-    background-color: #fff;
+    width: 300px;
+    background-color: #FFFFFF;
     padding: 10px;
     z-index: 999;
   }
+  .header-area .menu.menu.visible {
+    display: block;
+  }
 }
-.menu li {
-  margin: 0 10px;
+@media (max-width: 576px) {
+  .header-area .menu {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .header-area .menu li {
+    margin-left: 8px;
+    margin-right: 7px;
+  }
 }
 @media (max-width: 768px) {
-  .menu li {
+  .header-area .menu li {
     margin: 26px 0;
   }
 }
-.menu li a {
-  text-decoration: none;
-  color: #333;
-  text-transform: capitalize;
+.header-area .menu li a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
 }
-.menu li.ml-auto {
-  margin-left: auto;
+.header-area .menu li a:hover {
+  color: #E65100;
 }
-
-.toggle-btn {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #333;
-}
-.toggle-btn .menu-icon {
-  display: inline;
-}
-.toggle-btn .close-icon {
+.header-area .toggle-btn {
   display: none;
 }
-.toggle-btn.active .menu-icon {
-  display: none;
-}
-.toggle-btn.active .close-icon {
-  display: inline;
-}
-
 @media (max-width: 768px) {
-  .menu.visible {
-    display: block;
-  }
-  .toggle-btn {
+  .header-area .toggle-btn {
     display: block;
     position: absolute;
     top: 15px;
     right: 15px;
     z-index: 1001;
+    font-size: 28px;
+    cursor: pointer;
   }
-  .toggle-btn .menu-icon {
+  .header-area .toggle-btn .menu-icon {
     display: inline;
   }
-  .toggle-btn .close-icon {
+  .header-area .toggle-btn .close-icon {
     display: none;
   }
-  .toggle-btn.active .menu-icon {
+  .header-area .toggle-btn.active .menu-icon {
     display: none;
   }
-  .toggle-btn.active .close-icon {
+  .header-area .toggle-btn.active .close-icon {
     display: inline;
   }
 }
+
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .banner-area {
   background: #FFFFFF;
@@ -1716,6 +1815,7 @@ h2 {
   margin-left: 20px;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .about-area .about-img img {
   border-radius: 8px;
@@ -1768,6 +1868,7 @@ h2 {
   }
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .service-area {
   background-color: #FFFFFF;
@@ -1803,6 +1904,7 @@ h2 {
   color: #0056b3;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .controls {
   margin-bottom: 20px;
@@ -1875,6 +1977,7 @@ h2 {
   opacity: 1;
 }
 
+/* Define Light and Dark Mode Variables */
 /* Margin & Padding Utilities */
 .contact-area .contact-location .social-links h5 {
   font-size: 23px;
@@ -1956,4 +2059,47 @@ h2 {
 }
 .contact-area .contact-form form button:hover {
   background-color: #1A73E8;
+}
+
+/* Define Light and Dark Mode Variables */
+/* Margin & Padding Utilities */
+.footer-area {
+  border-top: 1px solid #333333;
+  padding: 1rem 0;
+}
+.footer-area p {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000000;
+  margin: 0;
+}
+@media (max-width: 575.95px) {
+  .footer-area p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.footer-area .social-links {
+  margin-top: 1rem;
+}
+.footer-area .social-links ul {
+  gap: 10px;
+}
+@media (max-width: 575.95px) {
+  .footer-area .social-links ul {
+    justify-content: center;
+  }
+}
+.footer-area .social-links ul li a {
+  background: #007bff;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-area .social-links ul li a:hover {
+  background: #E65100;
 }/*# sourceMappingURL=style.css.map */

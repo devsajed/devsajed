@@ -1,5 +1,56 @@
-// Header js 
+// Wait for the window to load, then hide the preloader
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none'; // Hide the preloader
+});
 
+
+// Scroll top bn 
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show the button when the user scrolls down 100px
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+scrollTopBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+
+// Select the toggle button and check for saved mode
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+// Load saved mode from localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  darkModeToggle.textContent = "☀️ Light Mode";
+}
+
+// Add event listener for toggle
+darkModeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  // Save the mode in localStorage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+    darkModeToggle.textContent = "☀️ Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    darkModeToggle.textContent = "🌙 Dark Mode";
+  }
+});
+
+// Header js 
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.header-area');
   const toggleBtn = document.querySelector('.toggle-btn');

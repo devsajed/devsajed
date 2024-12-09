@@ -1,3 +1,13 @@
+/* Define Light and Dark Mode Variables */
+$light-bg: #ffffff;
+$light-text: #000000;
+$light-header: #f8f9fa;
+
+$dark-bg: #121212;
+$dark-text: #ffffff;
+$dark-header: #1f1f1f;
+$header-bg: #f8f9fa;
+
 // Colors
 $overlay-bg: rgba(0, 0, 0, 0.7);
 $white-color: #fff;
@@ -8,11 +18,11 @@ $color-accent: #F9A825;  // Yellow-Orange
 $color-bg: #F5F5F5;      // Light Gray
 $color-text: #333333;    // Dark Gray
 $color-white: #FFFFFF;
-$color-black:#000000;
-$color-hover:#E65100;
+$color-black: #000000;
+$color-hover: #E65100;
 $transition-speed: 0.3s;
-$light-orange:#ff5722;
-$color-indigo:#673ab7;
+$light-orange: #ff5722;
+$color-indigo: #673ab7;
 
 $card-bg: #f8f9fa;
 $card-border: #ddd;
@@ -23,7 +33,7 @@ $text-hover-color: #007bff;
 $font-heading: 'Poppins', sans-serif;
 $font-body: 'Roboto', sans-serif;
 
-// Grid variables 
+// Grid variables
 $columns: 12;
 $grid_breakpoint_xxl: 1400px;
 $grid_breakpoint_xl: 1200px;
@@ -31,5 +41,6 @@ $grid_breakpoint_lg: 992px;
 $grid_breakpoint_md: 768px;
 $grid_breakpoint_sm: 576px;
 $grid_breakpoint_xs: 575.95px;
+
 /* Margin & Padding Utilities */
 $spacing-unit: 10px;

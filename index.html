@@ -47,8 +47,13 @@
 
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="spinner"></div>
+  </div>
+
   <!-- Header Area  -->
-  <Header id="header" class="header-area ">
+  <Header id="header" class="header-area py-1">
     <div class="container">
       <div class="row align-center py-1">
         <!-- logo Area -->
@@ -61,9 +66,13 @@
 
         <!-- Header Menu Area  -->
         <div class=" col-md-8 ">
+          <div class="dark-mode-toggle">
+            <button id="darkModeToggle" class="btn btn-light">🌙 Dark Mode</button>
+          </div>
+
           <nav>
             <ul class="menu text-center d-flex align-center">
-              <li class="ml-2 mr-2"><a class=" text-capitalize" href="#header">home</a></li>
+              <li class="ml-2 mr-2"><a class=" text-capitalize" href="index.html">home</a></li>
               <li class="ml-2 mr-2"><a class=" text-capitalize" href="#about">about </a></li>
               <li class="ml-2 mr-2"><a class=" text-capitalize" href="#service">service</a></li>
               <li class="ml-2 mr-2"><a class=" text-capitalize" href="#portfolio">portfolio</a></li>
@@ -72,14 +81,18 @@
           </nav>
           <!-- Toggle Button for Mobile -->
           <div class="toggle-btn ">
-            <span class="menu-icon">☰</span>
-            <span class="close-icon ">✖</span>
+            <span class="menu-icon">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+            <span class="close-icon ">
+              <i class="fa-solid fa-xmark"></i>
+            </span>
           </div>
         </div>
         <!-- /Header Menu Area  -->
       </div>
     </div>
-  </Header> 
+  </Header>
   <!-- /Header Area  -->
 
   <!-- Main Area  -->
@@ -355,7 +368,7 @@
         </div>
 
         <div class="row pt-4">
-          <div class="col-12 col-sm-12 col-md-3 ">
+          <div class="col-12 col-sm-12 col-md-5 ">
             <div class="contact-location">
               <div class="social-links">
                 <h5>social links</h5>
@@ -388,13 +401,14 @@
                   <span>mejortila, sylhet, bangleadesh.</span>
                 </li>
               </ul>
-              
+
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-9 ">
+          <div class="col-12 col-sm-12 col-md-7 ">
             <div class="contact-form">
               <h5>Contact Me</h5>
-              <form action="#" method="post">
+              <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
@@ -405,7 +419,7 @@
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Your Message" required ></textarea>
+                  <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit">Send</button>
               </form>
@@ -415,15 +429,53 @@
         </div>
       </div>
     </section>
-
     <!-- /Contact Area  -->
-
-
   </main>
   <!-- /Main Area  -->
 
+  <!-- Footer Area  -->
+  <footer class="footer-area py-3">
+    <div class="container">
+      <div class="row align-center">
+        <div class="col-12 col-sm-6 col-md-6">
+          <p>copyright&copy;2024. all rights reserved</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6">
+          <div class="social-links">
+            <ul class="d-flex justify-flex-end">
+              <li class="mr-2">
+                <a rel="noopener" href="#" title="facebook" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li class="mr-2">
+                <a rel="noopener" href="mailto:sajedislam019@gmail.com" target="_blank" title="envelope">
+                  <i class="fa-regular fa-envelope"></i>
+                </a>
+              </li>
+              <li class="mr-2">
+                <a rel="noopener" href="#" title="github" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li class="mr-2">
+                <a rel="noopener" href="#" title="linkdin" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Area  -->
 
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
   <!-- Include Isotope -->
   <script src="assets/js/isotope.pkgd.min.js"></script>
   <!-- main js  -->
