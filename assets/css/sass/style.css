@@ -1782,12 +1782,6 @@ h2 {
   color: #fff;
   text-decoration: none;
 }
-.portfolio-item .portfolio-card .overlay .icon-link i {
-  font-size: 14px;
-}
-.portfolio-item .portfolio-card .overlay .icon-link i:hover {
-  color: #1A73E8;
-}
 .portfolio-item .portfolio-card:hover .overlay {
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */
