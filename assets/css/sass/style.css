@@ -1,6 +1,8 @@
 /* Margin & Padding Utilities */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1701,7 +1703,7 @@ h2 {
   border-bottom: 2px solid;
 }
 .banner-area .banners .type-writer h1 .typewriter-role.developer {
-  color: dark-yellow;
+  color: #F9A825;
 }
 .banner-area .banners .type-writer h1 .typewriter-role.designer {
   color: #E65100;
@@ -1857,23 +1859,15 @@ h2 {
 
 .portfolio-item {
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  box-sizing: border-box;
 }
 .portfolio-item .portfolio-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  padding: 10px;
   border-radius: 8px;
+  padding: 12px;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  aspect-ratio: 4/3;
 }
 .portfolio-item .portfolio-card:hover {
   transform: translateY(-5px);
@@ -1881,9 +1875,7 @@ h2 {
 }
 .portfolio-item .portfolio-card img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: block;
   border-radius: 8px;
 }
 .portfolio-item .portfolio-card .overlay {
@@ -1908,16 +1900,15 @@ h2 {
 .portfolio-item .portfolio-card .overlay .icon-link {
   margin-top: 10px;
   font-size: 24px;
-  color: #ffffff;
-  text-decoration: none;
+}
+.portfolio-item .portfolio-card .overlay .icon-link:hover {
+  color: #ff5722;
 }
 .portfolio-item .portfolio-card:hover .overlay {
   opacity: 1;
 }
-@media (max-width: 576px) {
-  .portfolio-item {
-    flex: 0 0 100%;
-  }
+.portfolio-item:hover .icon-link {
+  color: #007bff;
 }
 
 /* Margin & Padding Utilities */

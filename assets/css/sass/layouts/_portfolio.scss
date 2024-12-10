@@ -23,152 +23,16 @@
 }
 
 // Portfolio items
-// .portfolio-item {
-//   padding: 15px;
-
-//   .portfolio-card {
-//     position: relative;
-//     overflow: hidden;
-//     border-radius: 8px;
-//     padding: 12px;
-//     background: $white-color;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-//     &:hover {
-//       transform: translateY(-5px);
-//       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-//     }
-
-//     img {
-//       width: 100%;
-//       display: block;
-//       border-radius: 8px;
-//     }
-
-//     .overlay {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       background-color: $overlay-bg;
-//       color: $white-color;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       flex-direction: column;
-//       opacity: 0;
-//       transition: opacity 0.3s ease;
-
-//       h3 {
-//         margin: 0;
-//         font-size: 20px;
-//       }
-
-//       .icon-link {
-//         margin-top: 10px;
-//         font-size: 24px;
-//         color: $white-color;
-//         text-decoration: none;
-//       }
-//     }
-
-//     &:hover .overlay {
-//       opacity: 1;
-//     }
-//   }
-// }
-// $white-color: #fff;
-// $overlay-bg: rgba(0, 0, 0, 0.5);
-
-// .portfolio-item {
-//   padding: 15px;
-//   flex: 0 0 calc(33.333% - 20px);
-//   // box-sizing: border-box;
-
-//   .portfolio-card {
-//     position: relative;
-//     overflow: hidden;
-//     border-radius: 8px;
-//     padding: 12px;
-//     background: $white-color;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     transition: transform 0.3s ease, box-shadow 0.3s ease;
-//     height: 196px; // Or any height that works
-
-//     &:hover {
-//       transform: translateY(-5px);
-//       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-//     }
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: cover;
-//       display: block;
-//       border-radius: 8px;
-//     }
-
-//     .overlay {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       background-color: $overlay-bg;
-//       color: $white-color;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       flex-direction: column;
-//       opacity: 0;
-//       transition: opacity 0.3s ease;
-
-//       h3 {
-//         margin: 0;
-//         font-size: 20px;
-//       }
-
-//       .icon-link {
-//         margin-top: 10px;
-//         font-size: 24px;
-//         color: $white-color;
-//         text-decoration: none;
-//       }
-//     }
-
-//     &:hover .overlay {
-//       opacity: 1;
-//     }
-//   }
-// }
-
-// @media (max-width: 767px) {
-//   .portfolio-item {
-//     flex: 0 0 100%; // Stack items on mobile
-//   }
-// }
-
 .portfolio-item {
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-
   .portfolio-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
     overflow: hidden;
-    padding: 10px;
     border-radius: 8px;
+    padding: 12px;
     background: $white-color;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 4 / 3; // Optional: Adjust for desired ratio
 
     &:hover {
       transform: translateY(-5px);
@@ -177,8 +41,7 @@
 
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      display: block;
       border-radius: 8px;
     }
 
@@ -205,18 +68,18 @@
       .icon-link {
         margin-top: 10px;
         font-size: 24px;
-        color: $white-color;
-        text-decoration: none;
+        &:hover{
+          color: $light-orange;
+        }
+        
       }
     }
 
-    &:hover .overlay {
+    &:hover .overlay{
       opacity: 1;
     }
   }
-  @include small{
-    flex: 0 0 100%;
+  &:hover  .icon-link{
+    color: $light-blue;
   }
 }
-
-

@@ -4,7 +4,6 @@ window.addEventListener('load', function() {
   preloader.style.display = 'none'; // Hide the preloader
 });
 
-
 // Scroll top bn 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -24,7 +23,6 @@ scrollTopBtn.onclick = function () {
     behavior: "smooth"
   });
 };
-
 
 // Header js 
 document.addEventListener('DOMContentLoaded', function () {
@@ -49,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleBtn.classList.toggle('active');
   });
 });
-
 
 // type writer js 
 document.addEventListener("DOMContentLoaded", function () {
@@ -104,27 +101,24 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWriter();
 });
 
-
-
 // isotop 
+// document.addEventListener('DOMContentLoaded', function () {
+//   var grid = document.querySelector('.filltering');
+//   var iso = new Isotope(grid, {
+//     itemSelector: '.portfolio-item',
+//     layoutMode: 'fitRows',
+//   });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var grid = document.querySelector('.filltering');
-  var iso = new Isotope(grid, {
-    itemSelector: '.portfolio-item',
-    layoutMode: 'fitRows',
-  });
+//   // Filter items on button click
+//   var filters = document.querySelectorAll('.controls .btn');
+//   filters.forEach((filter) =>
+//     filter.addEventListener('click', function () {
+//       var filterValue = this.getAttribute('data-filter');
+//       iso.arrange({ filter: filterValue });
 
-  // Filter items on button click
-  var filters = document.querySelectorAll('.controls .btn');
-  filters.forEach((filter) =>
-    filter.addEventListener('click', function () {
-      var filterValue = this.getAttribute('data-filter');
-      iso.arrange({ filter: filterValue });
-
-      // Update active button
-      filters.forEach((btn) => btn.classList.remove('active'));
-      this.classList.add('active');
-    })
-  );
-});
+//       // Update active button
+//       filters.forEach((btn) => btn.classList.remove('active'));
+//       this.classList.add('active');
+//     })
+//   );
+// });
