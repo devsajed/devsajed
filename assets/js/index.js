@@ -26,9 +26,6 @@ scrollTopBtn.onclick = function () {
 };
 
 
-
-
-
 // Header js 
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.header-area');
