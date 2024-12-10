@@ -102,23 +102,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // isotop 
-// document.addEventListener('DOMContentLoaded', function () {
-//   var grid = document.querySelector('.filltering');
-//   var iso = new Isotope(grid, {
-//     itemSelector: '.portfolio-item',
-//     layoutMode: 'fitRows',
-//   });
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.querySelector('.filltering');
+  var iso = new Isotope(grid, {
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows',
+  });
 
-//   // Filter items on button click
-//   var filters = document.querySelectorAll('.controls .btn');
-//   filters.forEach((filter) =>
-//     filter.addEventListener('click', function () {
-//       var filterValue = this.getAttribute('data-filter');
-//       iso.arrange({ filter: filterValue });
+  // Filter items on button click
+  var filters = document.querySelectorAll('.controls .btn');
+  filters.forEach((filter) =>
+    filter.addEventListener('click', function () {
+      var filterValue = this.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
 
-//       // Update active button
-//       filters.forEach((btn) => btn.classList.remove('active'));
-//       this.classList.add('active');
-//     })
-//   );
-// });
+      // Update active button
+      filters.forEach((btn) => btn.classList.remove('active'));
+      this.classList.add('active');
+    })
+  );
+});
