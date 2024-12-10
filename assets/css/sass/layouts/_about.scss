@@ -11,7 +11,7 @@
       font-size: 19px;
       line-height: 28px;
       font-weight: 500;
-      color: $color-black;
+      color: $black-color;
       @include small {
         padding: 10px;
       }
@@ -32,7 +32,7 @@
       font-size: 23px;
       line-height: 38px;
       text-transform: capitalize;
-      color: $color-black;
+      color: $black-color;
     }
 
     p {
@@ -40,8 +40,8 @@
     }
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 2px 8px $card-hover-shadow;
-      color: darken($text-hover-color, 20%);
+      box-shadow: 0 2px 8px $overlay-bg;
+      color: darken($light-blue, 20%);
     }
     @include small {
       margin-top: 20px;

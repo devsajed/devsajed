@@ -1,14 +1,10 @@
 @import '../base/variables';
-
-
-
-// Button controls for filtering
 .controls {
   margin-bottom: 20px;
   .btn {
     border: none;
     background: none;
-    color: $color-text;
+    color: $gray-color;
     font-size: 16px;
     padding: 8px 15px;
     cursor: pointer;
@@ -16,19 +12,19 @@
     transition: all 0.3s ease;
 
     &:hover {
-      color: $active-color;
+      color: $light-blue;
     }
 
     &.active {
-      color: $active-color;
-      border-color: $active-color;
+      color: $light-blue;
+      border-color: $light-blue;
     }
   }
 }
 
 // Portfolio items
 .portfolio-item {
-  padding: $card-margin;
+  padding: 15px;
 
   .portfolio-card {
     position: relative;

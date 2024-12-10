@@ -26,29 +26,8 @@ scrollTopBtn.onclick = function () {
 };
 
 
-// Select the toggle button and check for saved mode
-const darkModeToggle = document.getElementById("darkModeToggle");
-const body = document.body;
 
-// Load saved mode from localStorage
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark-mode");
-  darkModeToggle.textContent = "☀️ Light Mode";
-}
 
-// Add event listener for toggle
-darkModeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-
-  // Save the mode in localStorage
-  if (body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
-    darkModeToggle.textContent = "☀️ Light Mode";
-  } else {
-    localStorage.setItem("theme", "light");
-    darkModeToggle.textContent = "🌙 Dark Mode";
-  }
-});
 
 // Header js 
 document.addEventListener('DOMContentLoaded', function () {

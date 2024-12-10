@@ -1,6 +1,6 @@
 @import "../base/variables";
 .banner-area {
-  background: $color-white;
+  background: $white-color;
   .banners {
     .profile {
       text-align: center;
@@ -8,28 +8,28 @@
         width: 130px;
         border-radius: 50%;
         padding: 3px;
-        background: $color-accent;
+        background: $dark-yellow;
       }
     }
     .type-writer {
       h1 {
         font-size: 40px;
-        color: $color-black;
+        color: $black-color;
         text-transform: capitalize;
         .typewriter-role {
           display: inline-block;
           font-family: "lora", sans-serif;
           border-bottom: 2px solid;
           &.developer {
-            color: $color-accent;
+            color:dark-yellow;
           }
 
           &.designer {
-            color: $color-hover;
+            color: $dark-orange;
           }
 
           &.ux-designer {
-            color: $color-primary;
+            color: $dark-blue;
           }
         }
         @include small {
@@ -45,7 +45,7 @@
         max-width: 711px;
         text-align: center;
         margin: 0 auto;
-        color: $color-black;
+        color: $black-color;
         @include small {
           font-size: 29px;
           line-height: 40px;

@@ -7,7 +7,7 @@
       line-height: 46px;
       text-transform: capitalize;
       font-weight: 700;
-      color: $color-black;
+      color: $black-color;
       font-family: lora;
       font-style: italic;
     }
@@ -21,13 +21,13 @@
       top: 0;
       right: 0;
       width: 300px;
-      background-color: $color-white;
+      background-color: $white-color;
       padding: 10px;
       z-index: 999;
 
      
       &.menu.visible {
-        display: block; // Display the menu when visible class is added
+        display: block; 
       }
     }
     @include small{
@@ -44,9 +44,9 @@
        a{
         font-size: 18px;
         font-weight: 600;
-        color: $color-black;
+        color: $black-color;
         &:hover{
-          color:$color-hover;
+          color:$dark-orange;
         }
        }
       }
@@ -85,32 +85,3 @@
   }
 }
 
-// // General Styling
-// $primary-color: #333;
-// $background-color: #fff;
-// $toggle-btn-color: #000;
-// $menu-bg-color: #fff; // Background color for the mobile menu
-
-// Menu and Toggle Button Styles
-// .menu {
-//   li {
-//     margin: 0 10px;
-
-//     a {
-//       text-decoration: none;
-//       color: $primary-color;
-//       text-transform: capitalize;
-//     }
-
-//     &.ml-auto {
-//       margin-left: auto;
-//     }
-//   }
-// }
-
-// Hide the menu and toggle on small screens
-
-// Mobile Styles (max-width: 768px)
-// @include medium {
-
-// }

@@ -1,70 +1,15 @@
 @import "../base/variables";
 @import "../base/responsive";
 
-/* Mixin for Light and Dark Modes */
-@mixin theme($color-bg, $color-text, $header-bg) {
-  background-color: $color-bg;
-  color: $color-text;
-
-  .header-area {
-    background-color: $header-bg;
+// Keyframes for Spinner
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
-
-/* Base Styles */
-body {
-  font-family: $font-body;
-  transition: background-color $transition-speed, color $transition-speed;
-  @include theme($light-bg, $light-text, $light-header);
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  @include theme($dark-bg, $dark-text, $dark-header);
-}
-
-/* Header Styles */
-.header-area {
-  background-color: $header-bg;
-}
-
-/* Button Styles */
-button {
-  background-color: $color-primary;
-  color: $white-color;
-  &:hover {
-    background-color: $color-hover;
-  }
-}
-
-/* Card Styles */
-.card {
-  background-color: $card-bg;
-  border: 1px solid $card-border;
-  margin: $card-margin;
-  &:hover {
-    box-shadow: $card-hover-shadow;
-  }
-}
-
-/* Utility Classes */
-.text-primary {
-  color: $color-primary;
-}
-
-.text-accent {
-  color: $color-accent;
-}
-
-.bg-primary {
-  background-color: $color-primary;
-}
-
-.bg-accent {
-  background-color: $color-accent;
-}
-
-
 
 // General Preloader Styling
 .preloader {
@@ -73,37 +18,28 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: $color-bg;
+  background-color: $bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
- 
 }
- .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px dotted $color-hover; // Dotted border style
-    border-radius: 50%; // Make it a circle
-    border-top-color: transparent; // Make the top color transparent
-    animation: spin 1.5s linear infinite; // Animate the spinner
 
-    // Animation for the dotted spinner
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px dotted $gray-color;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1.5s linear infinite;
+}
+
 // Hide the preloader when the page is fully loaded
 body.loaded .preloader {
   display: none;
 }
 
-/* Styling for the Scroll to Top Button */
+// Scroll to Top Button
 #scrollTopBtn {
   position: fixed;
   bottom: 35px;
@@ -112,36 +48,37 @@ body.loaded .preloader {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: $color-primary;
-  color: white;
+  background-color: $dark-blue;
+  color: $white-color;
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
   font-size: 18px;
-  &:hover{
+
+  &:hover {
     background-color: $light-orange;
   }
 }
 
-
-// sticky header
+// Sticky Header
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: $color-white;
+  background: $white-color;
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-// button
+
+// Button Styles
 .btns {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  color: $color-white !important;
-  background: linear-gradient(135deg, $light-orange, $color-indigo);
+  color: $white-color !important;
+  background: linear-gradient(135deg, $light-orange, $indigo-color);
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -149,18 +86,17 @@ body.loaded .preloader {
   transition: background 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background: linear-gradient(135deg, $color-indigo, $light-orange);
+    background: linear-gradient(135deg, $indigo-color, $light-orange);
     transform: scale(1.05);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 5px $color-indigo;
+    box-shadow: 0 0 5px $indigo-color;
   }
 }
 
-// section title
-
+// Section Title
 .section-title {
   span {
     display: block;
@@ -168,12 +104,13 @@ body.loaded .preloader {
     text-transform: capitalize;
     font-weight: 500;
   }
+
   h4 {
     font-size: 45px;
     line-height: 56px;
     font-weight: 600;
     text-transform: capitalize;
-    color: $color-black;
+    color: $black-color;
     position: relative;
 
     &:before {
@@ -181,13 +118,15 @@ body.loaded .preloader {
       position: absolute;
       width: 60px;
       height: 6px;
-      background: $color-hover;
+      background: $dark-orange;
       bottom: 0;
       transform: translate(80px, 15px);
+
       @include small {
         transform: translate(44px, 15px);
       }
     }
+
     @include small {
       font-size: 32px;
       line-height: 39px;

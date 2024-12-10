@@ -1,12 +1,12 @@
 @import '../base/variables';
 .footer-area {
-  border-top: 1px solid $color-text;
+  border-top: 1px solid $gray-color;
   padding: 1rem 0;
 
   p {
     font-size: 16px;
     text-transform: capitalize;
-    color: $color-black;
+    color: $black-color;
     margin: 0;
     @include x-small {
       font-size: 16px;
@@ -18,15 +18,15 @@
     margin-top: 1rem;
 
     ul {
-      gap: 10px; // Spacing between items
+      gap: 10px; 
       @include x-small {
         justify-content: center;
       }
       li {
         a {
-          background: $active-color;
+          background: $light-blue;
           padding: 8px;
-          color: $color-white;
+          color: $white-color;
           font-size: 25px;
           border-radius: 50%;
           display: flex;
@@ -34,7 +34,7 @@
           justify-content: center;
 
           &:hover {
-            background: $color-hover;
+            background: $dark-orange;
           }
         }
       }

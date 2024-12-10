@@ -1,33 +1,19 @@
-/* Define Light and Dark Mode Variables */
-$light-bg: #ffffff;
-$light-text: #000000;
-$light-header: #f8f9fa;
-
-$dark-bg: #121212;
-$dark-text: #ffffff;
-$dark-header: #1f1f1f;
-$header-bg: #f8f9fa;
-
 // Colors
 $overlay-bg: rgba(0, 0, 0, 0.7);
-$white-color: #fff;
-$active-color: #007bff;
-$card-margin: 15px;
-$color-primary: #1A73E8; // Blue
-$color-accent: #F9A825;  // Yellow-Orange
-$color-bg: #F5F5F5;      // Light Gray
-$color-text: #333333;    // Dark Gray
-$color-white: #FFFFFF;
-$color-black: #000000;
-$color-hover: #E65100;
-$transition-speed: 0.3s;
+$white-color: #ffffff;
+$light-blue: #007bff;
+$dark-blue: #1A73E8; // Blue
+$dark-yellow: #F9A825;  // Yellow-Orange
+$bg-color: #F5F5F5;      // Light Gray
+$gray-color: #333333;    // Dark Gray
+$black-color: #000000;
+$dark-orange: #E65100;
 $light-orange: #ff5722;
-$color-indigo: #673ab7;
+$indigo-color: #673ab7;
 
 $card-bg: #f8f9fa;
 $card-border: #ddd;
-$card-hover-shadow: rgba(5, 1, 1, 0.603);
-$text-hover-color: #007bff;
+
 
 // Typography
 $font-heading: 'Poppins', sans-serif;

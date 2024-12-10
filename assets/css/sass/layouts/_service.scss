@@ -1,6 +1,6 @@
 @import '../base/variables';
 .service-area {
-  background-color: $color-white;
+  background-color: $white-color;
   .service-card {
     text-align: center;
     background: $card-bg;
@@ -20,12 +20,11 @@
       font-size: 1.25rem;
       font-weight: bold;
       margin-bottom: 10px;
-      color: $text-hover-color;
+      color: $light-blue;
     }
 
     p {
       font-size: 0.95rem;
-      // color: #555;
     }
 
     &:hover {
