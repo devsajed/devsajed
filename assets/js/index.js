@@ -1,7 +1,9 @@
 // Wait for the window to load, then hide the preloader
 window.addEventListener('load', function() {
   const preloader = document.getElementById('preloader');
-  preloader.style.display = 'none'; // Hide the preloader
+  if (preloader){
+    preloader.style.display = 'none';
+  } // Hide the preloader
 });
 
 // Scroll top bn 
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWriter();
 });
 
-// isotop 
+// isotop
 document.addEventListener('DOMContentLoaded', function () {
   var grid = document.querySelector('.filltering');
   var iso = new Isotope(grid, {
@@ -122,3 +124,4 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   );
 });
+
