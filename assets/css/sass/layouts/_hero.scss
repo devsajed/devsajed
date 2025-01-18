@@ -1,0 +1,123 @@
+@import "../base/variables";
+
+.hero-area {
+  .hero {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+    &.fade-in-bottom {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-img {
+      margin-bottom: 20px;
+
+      img {
+        box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        animation: animate 5s ease-in-out infinite;
+        transition: all 3s ease-in-out;
+      }
+    }
+
+    .hero-content {
+      .hero-title {
+        span {
+          display: block;
+          font-size: 14px;
+          text-transform: capitalize;
+          text-align: left;
+        }
+      }
+
+      .type-writer {
+        h1 {
+          font-size: 25px;
+          color: $text-color;
+
+          span {
+            font-size: 23px;
+
+          }
+
+          .typewriter-role {
+            display: inline-block;
+            font-family: $font-heading;
+            border-bottom: 2px solid;
+
+            &.developer {
+              color: $tomato-color;
+            }
+
+            &.designer {
+              color: $Primary-btn;
+            }
+
+            &.ux-designer {
+              color: $light-blue;
+            }
+          }
+
+          @include small {
+            font-size: 18px;
+          }
+        }
+
+        margin-bottom: 20px;
+      }
+
+      .btn-secondary {
+        display: inline-block;
+        font-size: 17px;
+        color: $bg-color;
+        padding: 12px 15px;
+        background: $Primary-btn;
+        margin-right: 5px;
+        border-radius: 4px;
+
+        &:hover {
+          box-shadow: 0 0 10px $Primary-btn;
+        }
+      }
+
+      .outline-btn {
+        display: inline-block;
+        font-size: 17px;
+        padding: 10px 15px;
+        border: 2px solid $Primary-btn;
+        color: $text-color;
+        border-radius: 5px;
+
+        &:hover {
+          background: $Primary-btn;
+          color: $bg-color;
+          box-shadow: 0 0 10px $Primary-btn;
+        }
+      }
+
+
+
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+
+.type-writer h1 {
+  font-size: 25px !important;
+}

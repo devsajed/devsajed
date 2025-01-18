@@ -1,0 +1,23 @@
+@import '../base/variables';
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+  
+}
+
+a{
+  text-decoration: none;
+  transition: 0.3s;
+}
+img{
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+

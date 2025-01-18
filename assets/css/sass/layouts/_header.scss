@@ -1,0 +1,148 @@
+@import "../base/variables";
+
+.header-area {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &.sticky {
+    background-color: $dark-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .logo {
+    a {
+      display: inline-block;
+      font-size: 2rem;
+      line-height: 2.75rem;
+      color: $text-color;
+      letter-spacing: 2px;
+      font-style: italic;
+      position: relative;
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $Primary-btn;
+        transform: scale(1.1);
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $Primary-btn;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      &::before {
+        transform: translate(-10px, -10px);
+      }
+
+      &::after {
+        transform: translate(10px, 10px);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+
+    @include medium {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 10000;
+
+      .bar {
+        width: 100%;
+        height: 4px;
+        background-color: $text-color;
+        transition: all 0.3s ease;
+      }
+    }
+         &.open .bar:nth-child(1) {
+           transform: rotate(45deg) translate(9px, 9px);
+         }
+    
+         &.open .bar:nth-child(2) {
+           opacity: 0;
+         }
+    
+         &.open .bar:nth-child(3) {
+           transform: rotate(-45deg) translate(5px, -5px);
+         }
+
+  }
+
+  .nav-menu {
+    @include medium {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 200px;
+      padding: 20px;
+      transform: translate(0, 20%);
+      background-color: #1f1f1f;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      transition: right 0.3s ease;
+      z-index: 9999;
+    }
+
+    ul {
+      @include medium {
+        flex-direction: column;
+      }
+
+      li {
+        @include large {
+          margin-left: 20px;
+        }
+
+        @include medium {
+          margin: 10px 0;
+        }
+
+        a {
+          display: inline-block;
+          font-size: 1rem;
+          line-height: 1.3rem;
+          color: $text-color;
+          text-decoration: none;
+          transition: color 0.3s ease, transform 0.3s ease;
+          padding: 10px 15px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            background-color: $Primary-btn;
+            color: $bg-color;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    &.open {
+      right: 0;
+    }
+  }
+}

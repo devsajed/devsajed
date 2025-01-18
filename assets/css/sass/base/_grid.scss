@@ -1,0 +1,91 @@
+@use "sass:math";
+
+.container {
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: $grid_breakpoint_xs) {
+  .container {
+    max-width: 100%;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoint_sm) {
+  .container {
+    width: 540px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoint_md) {
+  .container {
+    width: 720px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoint_lg) {
+  .container {
+    width: 960px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoint_xl) {
+  .container {
+    width: 1140px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $grid_breakpoint_xxl) {
+  .container {
+    width: 1320px;
+  }
+
+  @for $i from 1 through 12 {
+    .col-xxl-#{$i} {
+      width: math.div(100, 12) * $i * 1%;
+      padding: 0 15px;
+    }
+  }
+}
