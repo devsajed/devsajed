@@ -1,16 +1,6 @@
 @import "../base/variables";
 
 .about-area {
-  .about-img {
-    @include small {
-      margin-bottom: 20px;
-    }
-    img {
-      border-radius: 10px;
-      
-    }
-  }
-
   .about-content {
     h2 {
       font-family: $font-heading;
@@ -44,9 +34,4 @@
     }
   }
   
-}
-.info-item span a {
-	display: inline-block;
-	color: red;
-	text-decoration: underline;
 }
