@@ -30,6 +30,12 @@
   .about-info{
     background-color: $bg-color;
     .info-item{
+      span{
+        a{
+          color: $light-blue;
+          text-decoration: underline;
+        }
+      }
       padding: 20px;
       border-bottom: 1px solid $Primary-btn;
       &:last-child{
@@ -38,4 +44,9 @@
     }
   }
   
+}
+.info-item span a {
+	display: inline-block;
+	color: red;
+	text-decoration: underline;
 }

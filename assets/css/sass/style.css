@@ -1848,6 +1848,16 @@ h3 {
   padding: 20px;
   border-bottom: 1px solid #FFD700;
 }
+.about-area .about-info .info-item span a {
+  color: #00bfff;
+  text-decoration: underline;
+}
 .about-area .about-info .info-item:last-child {
   border-bottom: none;
+}
+
+.info-item span a {
+  display: inline-block;
+  color: red;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
