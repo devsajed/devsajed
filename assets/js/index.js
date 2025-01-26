@@ -102,39 +102,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Intersection Observer for animations on scroll
-  const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+  // Portfolio filter
+  // const portfolioFilter = document.getElementById("portfolio-filter");
+  // const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.1,
+  // portfolioFilter.addEventListener("click", (event) => {
+  //   const filter = event.target.dataset.filter;
+  //   if (filter) {
+  //     portfolioItems.forEach((item) => {
+  //       if (item.classList.contains(filter) || filter === "all") {
+  //         item.style.display = "block";
+  //       } else {
+  //         item.style.display = "none";
+  //       }
+  //     });
+  //   }
+  // });
+
+  // Scroll to top button
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      scrollToTopButton.classList.add("show");
+    } else {
+      scrollToTopButton.classList.remove("show");
     }
-  );
-
-  elementsToAnimate.forEach((element) => {
-    observer.observe(element);
   });
 
-  // Debounce function to optimize scroll events
-  let debounceTimer;
-  const debounce = (callback, delay) => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(callback, delay);
-  };
-
-  document.addEventListener("scroll", () => {
-    debounce(() => {
-      elementsToAnimate.forEach((element) => {
-        observer.observe(element);
-      });
-    }, 200); // 200ms debounce delay
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 });
