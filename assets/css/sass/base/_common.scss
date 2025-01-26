@@ -1,19 +1,20 @@
 @import "../base/variables";
 
-// preloader 
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $text-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      opacity: .9;
-    }
+// Preloader 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: .9;
+}
+
 // Contact Button CSS 
 .contact-btn {
   background: $Primary-btn;
@@ -23,7 +24,7 @@
   border: none;               // Optional: remove border for cleaner look
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; // Added smooth transition
   animation: animated 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   &:hover {
     box-shadow: 0 0 10px $Primary-btn;  // Increased shadow for better effect
     transform: scale(1.05);             // Add subtle scaling for better interaction
@@ -31,154 +32,48 @@
 }
 
 // Animation keyframes
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    /* More explicit for better readability */
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-  animation-duration: 0.8s;
-  /* Controls speed of the animation */
-  animation-timing-function: ease-out;
-  /* Smooth easing */
-  animation-fill-mode: both;
-  /* Prevents jump to original state after animation ends */
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-@keyframes fadeInBottom {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInBottom {
-  animation-name: fadeInBottom;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
 @keyframes animated {
   0% {
     transform: translateY(5px);
   }
-
   50% {
     transform: translateY(20px);
   }
-
   100% {
     transform: translateY(5px);
   }
 }
-.gradient-border {
-  border: 4px solid;
-  border-image-slice: 1;
-  border-width: 4px;
-  border-image-source: linear-gradient(90deg, #ff7f50, #1e90ff, #32cd32);
-  animation: borderMove 5s infinite linear;
-}
-
-@keyframes borderMove {
-  0% {
-    border-image-source: linear-gradient(0deg, #ff7f50, #1e90ff, #32cd32);
-  }
-
-  100% {
-    border-image-source: linear-gradient(360deg, #ff7f50, #1e90ff, #32cd32);
-  }
-}
-.border-rotate-animation {
-  position: relative;
-  padding: 20px;
-  border: 2px solid #3498db;
-  animation: rotateBorder 3s infinite linear;
-}
-
-@keyframes rotateBorder {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 
 
 .card {
   position: relative;
   margin: 0 auto;
-  // padding: 15px;
-  /* Increase padding for better spacing */
   border-radius: 10px;
-  // background: #fff;
-  /* Add a background color for contrast */
   z-index: 1;
-  /* Ensure content is above the pseudo-elements */
 
   &::after,
   &::before {
     content: '';
     position: absolute;
     height: calc(100% + 6px);
-    /* Ensure border animation stays visible */
     width: calc(100% + 6px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     border-radius: inherit;
-    background-image: conic-gradient(from var(--angle),
-        #d32222, #f39c12, #e74c3c, #9b59b6, #2ecc71, #3498db);
+    background-image: conic-gradient(from var(--angle), #d32222, #f39c12, #e74c3c, #9b59b6, #2ecc71, #3498db);
     animation: spin 3s linear infinite;
   }
 
   &::before {
     filter: blur(15px);
-    /* Reduced blur for a cleaner glow */
     opacity: 0.5;
   }
 }
 
 @property --angle {
   syntax: "<angle>";
-  /* Correct typo in syntax */
   initial-value: 0deg;
   inherits: false;
 }
@@ -187,25 +82,99 @@
   from {
     --angle: 0deg;
   }
-
   to {
     --angle: 360deg;
   }
 }
-
-.box{
-  background-color: #000;
-  padding: 20px;
-  // width: 300px; 
-  // height: 300px;
-  border-radius: 10px;
-  position: relative;
-  &::after
-  {
-    content: '';
-    position: absolute;
-    inset: -3;
-    background: red;
-    z-index: 1;
+// Slide in animations
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
   }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Base class for elements that animate on scroll
+.animate-on-scroll {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.8s, opacity 0.8s ease-out, transform 0.8s ease-out; // Delay visibility reset
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+// Specific slide-in directions using mixins
+@mixin slide-in($direction) {
+  animation-name: slideIn#{$direction};
+}
+
+.slide-in-left {
+  @include slide-in(Left);
+}
+
+.slide-in-right {
+  @include slide-in(Right);
+}
+
+.slide-in-top {
+  @include slide-in(Top);
+}
+
+.slide-in-bottom {
+  @include slide-in(Bottom);
+}
+
+// When the element becomes visible
+.animate-on-scroll.visible {
+  opacity: 1;
+  visibility: visible;
 }

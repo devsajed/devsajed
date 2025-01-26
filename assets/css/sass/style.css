@@ -52,61 +52,6 @@ img {
   transform: scale(1.05);
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    /* More explicit for better readability */
-  }
-}
-.fadeInLeft {
-  animation-name: fadeInLeft;
-  animation-duration: 0.8s;
-  /* Controls speed of the animation */
-  animation-timing-function: ease-out;
-  /* Smooth easing */
-  animation-fill-mode: both;
-  /* Prevents jump to original state after animation ends */
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.fadeInRight {
-  animation-name: fadeInRight;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-@keyframes fadeInBottom {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.fadeInBottom {
-  animation-name: fadeInBottom;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
 @keyframes animated {
   0% {
     transform: translateY(5px);
@@ -118,51 +63,16 @@ img {
     transform: translateY(5px);
   }
 }
-.gradient-border {
-  border: 4px solid;
-  border-image-slice: 1;
-  border-width: 4px;
-  border-image-source: linear-gradient(90deg, #ff7f50, #1e90ff, #32cd32);
-  animation: borderMove 5s infinite linear;
-}
-
-@keyframes borderMove {
-  0% {
-    border-image-source: linear-gradient(0deg, #ff7f50, #1e90ff, #32cd32);
-  }
-  100% {
-    border-image-source: linear-gradient(360deg, #ff7f50, #1e90ff, #32cd32);
-  }
-}
-.border-rotate-animation {
-  position: relative;
-  padding: 20px;
-  border: 2px solid #3498db;
-  animation: rotateBorder 3s infinite linear;
-}
-
-@keyframes rotateBorder {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .card {
   position: relative;
   margin: 0 auto;
-  /* Increase padding for better spacing */
   border-radius: 10px;
-  /* Add a background color for contrast */
   z-index: 1;
-  /* Ensure content is above the pseudo-elements */
 }
 .card::after, .card::before {
   content: "";
   position: absolute;
   height: calc(100% + 6px);
-  /* Ensure border animation stays visible */
   width: calc(100% + 6px);
   top: 50%;
   left: 50%;
@@ -174,13 +84,11 @@ img {
 }
 .card::before {
   filter: blur(15px);
-  /* Reduced blur for a cleaner glow */
   opacity: 0.5;
 }
 
 @property --angle {
   syntax: "<angle>";
-  /* Correct typo in syntax */
   initial-value: 0deg;
   inherits: false;
 }
@@ -192,18 +100,84 @@ img {
     --angle: 360deg;
   }
 }
-.box {
-  background-color: #000;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
-.box::after {
-  content: "";
-  position: absolute;
-  inset: -3;
-  background: red;
-  z-index: 1;
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-on-scroll {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.8s, opacity 0.8s ease-out, transform 0.8s ease-out;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.slide-in-right {
+  animation-name: slideInRight;
+}
+
+.slide-in-top {
+  animation-name: slideInTop;
+}
+
+.slide-in-bottom {
+  animation-name: slideInBottom;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Margin & Padding Utilities */
@@ -1669,7 +1643,7 @@ h3 {
   z-index: 1000;
 }
 .header-area.sticky {
-  background-color: #333333;
+  background-color: #091813;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -1790,15 +1764,6 @@ h3 {
 }
 
 /* Margin & Padding Utilities */
-.hero-area .hero {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-.hero-area .hero.fade-in-bottom {
-  opacity: 1;
-  transform: translateY(0);
-}
 .hero-area .hero .hero-img {
   margin-bottom: 20px;
 }
@@ -1851,6 +1816,7 @@ h3 {
   background: #FFD700;
   margin-right: 5px;
   border-radius: 4px;
+  overflow: hidden;
 }
 .hero-area .hero .hero-content .btn-secondary:hover {
   box-shadow: 0 0 10px #FFD700;
@@ -1862,11 +1828,28 @@ h3 {
   border: 2px solid #FFD700;
   color: #FFFFFF;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+.hero-area .hero .hero-content .outline-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  background-color: #FFD700;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.hero-area .hero .hero-content .outline-btn:hover::before {
+  transform: translateX(0);
 }
 .hero-area .hero .hero-content .outline-btn:hover {
-  background: #FFD700;
   color: #1F1F1F;
-  box-shadow: 0 0 10px #FFD700;
 }
 
 @keyframes animate {
@@ -1880,10 +1863,6 @@ h3 {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
-.type-writer h1 {
-  font-size: 25px !important;
-}
-
 /* Margin & Padding Utilities */
 .about-area {
   padding: 60px 0;
@@ -1906,20 +1885,4 @@ h3 {
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 15px;
-}
-.about-area .about-content .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #FFD700;
-  color: #1F1F1F;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.about-area .about-content .btn:hover {
-  background-color: #ccac00;
-  transform: translateY(-2px);
-}
-.about-area .about-content .btn i {
-  margin-left: 5px;
 }/*# sourceMappingURL=style.css.map */

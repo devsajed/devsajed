@@ -1,4 +1,4 @@
-@import '../base/variables';
+@import "../base/variables";
 
 .about-area {
   padding: 60px 0;
@@ -8,7 +8,6 @@
     width: 400px;
     text-align: center;
     img {
-      
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(59, 42, 42, 0.1);
     }
@@ -26,23 +25,6 @@
       margin-top: 15px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: $Primary-btn;
-      color: $bg-color;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-
-      &:hover {
-        background-color: darken($Primary-btn, 10%);
-        transform: translateY(-2px);
-      }
-
-      i {
-        margin-left: 5px;
-      }
-    }
+    
   }
 }

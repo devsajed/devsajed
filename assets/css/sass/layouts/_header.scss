@@ -7,7 +7,7 @@
   z-index: 1000;
 
   &.sticky {
-    background-color: $dark-color;
+    background-color: $navy-blue;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s;
   }
