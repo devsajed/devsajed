@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Typewriter effect
   const typewriterText = document.getElementById("typewriter-text");
   if (typewriterText) {
-    const roles = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const roles = ["Web Developer", "Wordpress Developer", "UI/UX Designer"];
     let roleIndex = 0;
     let charIndex = 0;
     let currentText = "";
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (roles[roleIndex] === "Web Developer") {
         currentRoleClass = "developer";
-      } else if (roles[roleIndex] === "Web Designer") {
+      } else if (roles[roleIndex] === "Wordpress Developer") {
         currentRoleClass = "designer";
       } else if (roles[roleIndex] === "UI/UX Designer") {
         currentRoleClass = "ux-designer";
@@ -102,23 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Portfolio filter
-  // const portfolioFilter = document.getElementById("portfolio-filter");
-  // const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-  // portfolioFilter.addEventListener("click", (event) => {
-  //   const filter = event.target.dataset.filter;
-  //   if (filter) {
-  //     portfolioItems.forEach((item) => {
-  //       if (item.classList.contains(filter) || filter === "all") {
-  //         item.style.display = "block";
-  //       } else {
-  //         item.style.display = "none";
-  //       }
-  //     });
-  //   }
-  // });
-
+  
   // Scroll to top button
   const scrollToTopButton = document.getElementById("scroll-to-top");
   window.addEventListener("scroll", () => {

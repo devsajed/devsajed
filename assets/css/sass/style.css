@@ -1852,13 +1852,17 @@ h3 {
 .services-area .service-item {
   position: relative;
   background-color: #1f2b38;
-  width: 280px;
   border-radius: 1rem;
   color: #FFFFFF;
   padding: 2rem;
   isolation: isolate;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .services-area .service-item {
+    margin-bottom: 1.5rem;
+  }
 }
 .services-area .service-item::before, .services-area .service-item::after {
   content: "";
@@ -1918,106 +1922,55 @@ h3 {
     transform: rotateZ(-360deg);
   }
 }
-.portfolio-area .portfolio-item {
-  background-color: #1F1F1F;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 5px;
+.portfolio-area {
+  background-color: #091813;
 }
-.portfolio-area .portfolio-item .portfolio-icon {
-  font-size: 40px;
-  color: #FFD700;
-  margin-bottom: 20px;
+.portfolio-area .portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0 30px;
 }
-.portfolio-area .portfolio-item h3 {
-  font-family: "Lora", serif;
+.portfolio-area .portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.portfolio-area .portfolio-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-area .portfolio-card .overlay h3 {
+  margin-bottom: 10px;
   font-size: 24px;
-  color: #FFFFFF;
-  margin-bottom: 20px;
 }
-.portfolio-area .portfolio-item p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #FFFFFF;
+.portfolio-area .portfolio-card .overlay .icon-link {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
 }
-.portfolio-area .portfolio-item:hover {
-  background-color: #1f2b38;
-}
-.portfolio-area .portfolio-item:hover h3,
-.portfolio-area .portfolio-item:hover p {
+.portfolio-area .portfolio-card .overlay .icon-link:hover {
   color: #3498db;
 }
-.portfolio-area .portfolio-item:last-child {
-  margin-bottom: 0;
+.portfolio-area .portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.portfolio-area .portfolio-filter {
-  margin-bottom: 30px;
-}
-.portfolio-area .portfolio-filter button {
-  background-color: #FFD700;
-  color: #1F1F1F;
-  font-family: "Lora", serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.portfolio-area .portfolio-filter button:hover {
-  background-color: #1f2b38;
-}
-.portfolio-area .portfolio-filter button.active {
-  background-color: #1f2b38;
-}
-.portfolio-area .portfolio-gallery .portfolio-img img {
-  width: 100%;
-  border-radius: 5px;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content {
-  background-color: #1F1F1F;
-  border-radius: 5px;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content .modal-header {
-  border-bottom: 1px solid #FFD700;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content .modal-header h2 {
-  font-family: "Lora", serif;
-  font-size: 24px;
-  color: #FFD700;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content .modal-header button {
-  color: #FFD700;
-  font-size: 24px;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content .modal-body img {
-  width: 100%;
-  border-radius: 5px;
-}
-.portfolio-area .portfolio-modal .modal-dialog .modal-content .modal-body p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-.portfolio-area .portfolio-filter {
-  margin-bottom: 30px;
-}
-.portfolio-area .portfolio-filter button {
-  background-color: #FFD700;
-  color: #1F1F1F;
-  font-family: "Lora", serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.portfolio-area .portfolio-filter button:hover {
-  background-color: #1f2b38;
-}
-.portfolio-area .portfolio-filter button.active {
-  background-color: #1f2b38;
-}
-.portfolio-area .portfolio-gallery .portfolio-img img {
-  width: 100%;
-  border-radius: 5px;
+.portfolio-area .portfolio-card:hover .overlay {
+  opacity: 1;
 }
 
 /* Margin & Padding Utilities */

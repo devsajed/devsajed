@@ -4,18 +4,18 @@
   .service-item {
     position: relative;
     background-color: $dark-blue;
-    width: 280px;
-    // margin: 2rem;
     border-radius: 1rem;
     color: $text-color;
-    padding: 2rem ;
+    padding: 2rem;
     isolation: isolate; // Ensures the pseudo-elements don't interfere with each other
     overflow: hidden;
     transition: all 0.3s ease-in-out; // Smooth transition for hover effect
-
+    @include medium {
+      margin-bottom: 1.5rem;
+    }
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0; // Covers the full element by default
       border-radius: inherit; // Matches the parent border-radius
@@ -39,7 +39,9 @@
     &::after {
       background-color: $navy-blue; // Adds a solid background to the element
       inset: 0.25rem; // Creates a "gap" effect between the gradient border and the content
-      border-radius: calc(1rem - 0.25rem); // Adjusts the radius for the inner element
+      border-radius: calc(
+        1rem - 0.25rem
+      ); // Adjusts the radius for the inner element
       z-index: -1; // Ensures it stays behind the content but above the gradient
       transition: all 0.35s; // Smooth transition for hover effect
     }
@@ -53,36 +55,34 @@
       }
     }
 
-    .service-icon{
+    .service-icon {
       font-size: 4rem;
       margin-inline: auto;
       color: transparent;
       -webkit-text-stroke: thin var(--color); // Adds a thin white border around the icon
-      text-align:center ;
+      text-align: center;
       transition: all 0.35s ease-in-out; // Smooth transition for hover effect
     }
     &:hover .service-icon {
-        color: var(--color); // Changes the icon color on hover
-        -webkit-text-stroke-width: 0;
-      }
+      color: var(--color); // Changes the icon color on hover
+      -webkit-text-stroke-width: 0;
+    }
 
-      .service-content{
-        h4{
-          text-align: center;
-          font-size: 1.5rem;
-          line-height: 1.875rem;
-          margin-block:2.5rem 1.5rem ;
-          color: var(--color);
-          
-        }
-        p{
-          text-align: center;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          opacity: 0.75;
-        }
+    .service-content {
+      h4 {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        margin-block: 2.5rem 1.5rem;
+        color: var(--color);
       }
-      
+      p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        opacity: 0.75;
+      }
+    }
   }
 }
 

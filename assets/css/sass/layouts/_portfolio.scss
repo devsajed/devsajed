@@ -1,123 +1,60 @@
-.portfolio-area{
-  .portfolio-item{
-    background-color: $bg-color;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    .portfolio-icon{
-      font-size: 40px;
-      color: $Primary-btn;
-      margin-bottom: 20px;
-    }
-    h3{
-      font-family: $font-heading;
-      font-size: 24px;
-      color: $text-color;
-      margin-bottom: 20px;
-    }
-    p{
-      font-family: $font-body;
-      font-size: 16px;
-      color: $text-color;
-    }
-    &:hover{
-      background-color: $dark-blue;
-      h3,
-      p{
-        color: $light-blue;
-      }
-    }
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
+// @import "../base/variables";
+// Portfolio Area
+ .portfolio-area {
+  background-color: $navy-blue;
 
-  .portfolio-filter{
-    margin-bottom: 30px;
-    button{
-      background-color: $Primary-btn;
-      color: $bg-color;
-      font-family: $font-heading;
-      font-size: 16px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-right: 10px;
-      &:hover{
-        background-color: $dark-blue;
-      }
-      &.active{
-        background-color: $dark-blue;
-      }
+  .portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 0 30px;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-  }
 
-  .portfolio-gallery{
-    .portfolio-img{
-      img{
-        width: 100%;
-        border-radius: 5px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
       }
-    }
-  }
 
-  .portfolio-modal{
-    .modal-dialog{
-      .modal-content{
-        background-color: $bg-color;
-        border-radius: 5px;
-        .modal-header{
-          border-bottom: 1px solid $Primary-btn;
-          h2{
-            font-family: $font-heading;
-            font-size: 24px;
-            color: $Primary-btn;
-          }
-          button{
-            color: $Primary-btn;
-            font-size: 24px;
-          }
-        }
-        .modal-body{
-          img{
-            width: 100%;
-            border-radius: 5px;
-          }
-          p{
-            font-family: $font-body;
-            font-size: 16px;
-            color: $text-color;
-          }
+      .icon-link {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+
+        &:hover {
+          color: #3498db;
         }
       }
     }
-  }
 
-  .portfolio-filter{
-    margin-bottom: 30px;
-    button{
-      background-color: $Primary-btn;
-      color: $bg-color;
-      font-family: $font-heading;
-      font-size: 16px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-right: 10px;
-      &:hover{
-        background-color: $dark-blue;
-      }
-      &.active{
-        background-color: $dark-blue;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+      .overlay {
+        opacity: 1;
       }
     }
   }
+ }
 
-
-  .portfolio-gallery{
-    .portfolio-img{
-      img{
-        width: 100%;
-        border-radius: 5px;
-      }
-    }
-  }
-}
