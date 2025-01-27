@@ -1853,7 +1853,6 @@ h3 {
   position: relative;
   background-color: #1f2b38;
   width: 280px;
-  margin: 2rem;
   border-radius: 1rem;
   color: #FFFFFF;
   padding: 2rem;
@@ -2066,9 +2065,10 @@ h3 {
   margin-bottom: 20px;
 }
 .contact-area .contact-info .info-item span {
-  display: block;
   font-size: 16px;
-  color: #333;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
 }
 .contact-area .contact-info .info-item span a {
   color: #3498db;
