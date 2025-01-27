@@ -1,40 +1,93 @@
-// Services Area
+@import "../base/variables";
+
 .services-area {
   .service-item {
-    background-color: $bg-color;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
+    position: relative;
+    background-color: $dark-blue;
+    width: 280px;
+    margin: 2rem;
+    border-radius: 1rem;
+    color: $text-color;
+    padding: 2rem ;
+    isolation: isolate; // Ensures the pseudo-elements don't interfere with each other
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; // Smooth transition for hover effect
 
-    .service-icon {
-      font-size: 40px;
-      color: $Primary-btn;
-      margin-bottom: 20px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0; // Covers the full element by default
+      border-radius: inherit; // Matches the parent border-radius
     }
 
-    h3 {
-      font-family: $font-heading;
-      font-size: 24px;
-      color: $text-color;
-      margin-bottom: 20px;
+    &::before {
+      width: 200%; // Ensures the gradient rotates outside the parent
+      height: 200%;
+      background-image: conic-gradient(
+        var(--color) 0deg,
+        transparent 60deg,
+        transparent 180deg,
+        var(--color) 180deg,
+        transparent 240deg
+      );
+      inset: -50%; // Extends beyond the element for a smooth animation
+      z-index: -2; // Places it behind the parent element
+      animation: border 10s linear infinite;
     }
 
-    p {
-      font-family: $font-body;
-      font-size: 16px;
-      color: $text-color;
+    &::after {
+      background-color: $navy-blue; // Adds a solid background to the element
+      inset: 0.25rem; // Creates a "gap" effect between the gradient border and the content
+      border-radius: calc(1rem - 0.25rem); // Adjusts the radius for the inner element
+      z-index: -1; // Ensures it stays behind the content but above the gradient
+      transition: all 0.35s; // Smooth transition for hover effect
     }
-
     &:hover {
-      background-color: $dark-blue;
-      h3,
-      p {
-        color: $light-blue;
+      &::before {
+        animation-play-state: paused; // Pauses the animation on hover
+      }
+
+      &::after {
+        background-color: $dark-blue; // Changes the background color on hover
       }
     }
 
-    &:last-child {
-      margin-bottom: 0;
+    .service-icon{
+      font-size: 4rem;
+      margin-inline: auto;
+      color: transparent;
+      -webkit-text-stroke: thin var(--color); // Adds a thin white border around the icon
+      text-align:center ;
+      transition: all 0.35s ease-in-out; // Smooth transition for hover effect
     }
+    &:hover .service-icon {
+        color: var(--color); // Changes the icon color on hover
+        -webkit-text-stroke-width: 0;
+      }
+
+      .service-content{
+        h4{
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 1.875rem;
+          margin-block:2.5rem 1.5rem ;
+          color: var(--color);
+          
+        }
+        p{
+          text-align: center;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          opacity: 0.75;
+        }
+      }
+      
+  }
+}
+
+@keyframes border {
+  to {
+    transform: rotateZ(-360deg); // Smooth rotation of the gradient
   }
 }
