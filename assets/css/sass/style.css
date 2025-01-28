@@ -1821,6 +1821,9 @@ h3 {
   }
 }
 /* Margin & Padding Utilities */
+.about-area {
+  background-color: #091813;
+}
 .about-area .about-content h2 {
   font-family: "Lora", serif;
   font-size: 30px;
@@ -1884,6 +1887,9 @@ h3 {
   border-radius: 0.75rem;
   z-index: -1;
   transition: all 0.35s;
+}
+.services-area .service-item:hover {
+  transform: translateY(-5px);
 }
 .services-area .service-item:hover::before {
   animation-play-state: paused;
@@ -1974,59 +1980,124 @@ h3 {
 }
 
 /* Margin & Padding Utilities */
-.contact-area {
-  padding: 60px 0;
-  background-color: #1F1F1F;
+.contact-area .contact-info h4 {
+  font-size: 25px;
+  line-height: 30px;
+  position: relative;
+}
+.contact-area .contact-info h4:before {
+  content: "";
+  position: absolute;
+  background: #FFD700;
+  width: 60px;
+  height: 3px;
+  bottom: -10px;
+}
+.contact-area .contact-info p {
+  margin: 30px 0;
+}
+.contact-area .contact-info .info-item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.contact-area .contact-info .info-item i {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #FFD700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.contact-area .contact-info .info-item i:hover {
+  background: #FFD700;
+  color: #1F1F1F;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #FFD700;
+}
+.contact-area .contact-info .info-item a,
+.contact-area .contact-info .info-item span {
+  display: inline-block;
+  margin-left: 25px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contact-area .contact-info .info-item a:hover,
+.contact-area .contact-info .info-item span:hover {
+  color: #FF6347;
+}
+.contact-area .contact-info .info-item span:hover {
+  color: #FFFFFF;
+}
+.contact-area .contact-info .social-icon {
+  display: flex;
+  margin-top: 4rem;
+}
+.contact-area .contact-info .social-icon a {
+  width: 45px;
+  height: 45px;
+  background: #FFD700;
+  color: #1F1F1F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.contact-area .contact-info .social-icon a:hover {
+  transform: translateY(-5px);
+  border-radius: 4px;
+  box-shadow: 0 0 10px #FFD700;
 }
 .contact-area .contact-form {
-  background-color: #1F1F1F;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Button Styles */
+}
+@media (max-width: 768px) {
+  .contact-area .contact-form {
+    margin-top: 4rem;
+  }
 }
 .contact-area .contact-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
-.contact-area .contact-form .form-group .form-control {
+.contact-area .contact-form .form-group.d-flex {
+  gap: 1rem;
+}
+.contact-area .contact-form .half-width {
+  width: 48%;
+}
+.contact-area .contact-form .form-control {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #333;
+  padding: 0.75rem;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: transparent;
+  color: #FFFFFF;
 }
-.contact-area .contact-form .form-group .btn-secondary {
-  background-color: #3498db;
-  color: #fff;
+.contact-area .contact-form .form-control:focus {
+  border-color: #FFD700;
+}
+.contact-area .contact-form textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-area .contact-form .btn-primary {
+  padding: 0.75rem;
+  background-color: #FFD700;
+  color: #1F1F1F;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.contact-area .contact-form .form-group .btn-secondary:hover {
-  background-color: #2980b9;
-}
-.contact-area .contact-info {
-  background-color: #1F1F1F;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.contact-area .contact-info .info-item {
-  margin-bottom: 20px;
-}
-.contact-area .contact-info .info-item span {
-  font-size: 16px;
-  color: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-.contact-area .contact-info .info-item span a {
-  color: #3498db;
-  text-decoration: none;
-}
-.contact-area .contact-info .info-item span a:hover {
-  text-decoration: underline;
+.contact-area .contact-form .btn-primary:hover {
+  box-shadow: 0 0 10px #FFD700;
 }/*# sourceMappingURL=style.css.map */

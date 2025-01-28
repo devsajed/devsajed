@@ -304,54 +304,66 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row align-center">
           <div class="col-12 col-sm-12 col-md-6">
             <div class="contact-info">
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Email:</span>
-                <span><a href="mailto:devsajed65@gmail.com" class=" fw-500">devsajed65@gmail.com</a> </span>
+              <h4>Get In Touch</h4>
+              <p>Feel free to reach out to me with any questions, comments, or project inquiries. I'm always happy to
+                connect and discuss new opportunities.</p>
+              <div class="info-item ">
+                <i class="fa-solid fa-phone "></i>
+                <a href="#" aria-label="phone" class=" fw-500">+88017914-57908</a>
               </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Phone:</span>
-                <span><a href="tel:+8801791457908 " class=" fw-500">+880 179 145 7908</a></span>
+              <div class="info-item ">
+                <i class="fa-solid fa-envelope "></i>
+                <a href="#" aria-label="email" class=" fw-500">devsajed65gmail.com</a>
               </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">linkdin:</span>
-                <span><a href=" #" class=" fw-500" target="_blank">sajed islam</a></span>
+              <div class="info-item ">
+                <i class="fa-solid fa-location-dot "></i>
+                <span class="text-capitalize">sylhet,bangladesh.</span>
               </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">website:</span>
-                <span><a rel="noopener" aria-label="portfolio website" title="portfolio"
-                    href="https://devsajed.github.io/devsajed/ " target="_blank"
-                    class=" fw-500">www.devsajed.com</a></span>
-              </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Location:</span>
-                <span>Sylhet, Bangladesh</span>
+              <div class="social-icon ">
+                <a href="#" aria-label="facebook" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" aria-label="twitter" target="_blank">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="linkedin" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="github" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6">
             <div class="contact-form">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <input type="text" name="firstname" id="firstname" placeholder="Your First Name"
-                    class="form-control firstname" autocomplete="name">
-                  <input type="text" name="lastname" id="lastname" placeholder="Your Last Name"
-                    class="form-control lastname" autocomplete="name">
+              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759">
+                <div class="form-group d-flex">
+                  <input type="text" name='first_name' id="firstName" class="form-control half-width "
+                    placeholder="First Name" required>
+                  <input type="text" name='last_name' id="lastName" class="form-control half-width" placeholder="Last Name"
+                    required>
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" id="email" placeholder="Your Email" class="form-control"
-                    autocomplete="email">
+                  <input type="email" id="email" name="email" class="form-control " placeholder="Your Email" required>
                 </div>
-                <div class="form-group">
-                  <textarea name="message" id="message" placeholder="Your Message" class="form-control"
-                    autocomplete="message"></textarea>
+                <div class="form-group ">
+                  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your Message"
+                    required></textarea>
                 </div>
-                <div class="form-group">
-                  <button type="submit" class="btn-secondary text-capitalize fw-700">send message</button>
-                </div>
+                <button type="submit" class="btn-primary text-capitalize fw-700">send message</button>
               </form>
+              <!-- Success and Error Messages -->
+              <div id="formResponse" style="margin-top: 1rem; color: #28a745;  display: none;">
+                Thank you for your message! We will get back to you soon.
+              </div>
+              <div id="formError" style="margin-top: 1rem; color: #dc3545;  display: none;">
+                Oops! Something went wrong. Please try again later.
+              </div>
             </div>
           </div>
         </div>
@@ -377,13 +389,18 @@
   <!-- /Footer Area  -->
 
   <!-- Scroll to Top Button -->
-  <a href="#" aria-label="Scroll top" title="Scroll Top" id="scroll-to-top" class="scroll-to-top">
+  <a aria-label="Scroll top" title="Scroll Top" id="scroll-to-top" class="scroll-to-top">
     <i class="fa-solid fa-angle-up"></i>
   </a>
-
   <!-- /Scroll to Top Button -->
+
+
+
   <!-- Main js  -->
   <script src="assets/js/index.js"></script>
+<script>
+
+</script>
 
 </body>
 

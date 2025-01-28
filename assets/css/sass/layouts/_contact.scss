@@ -1,69 +1,139 @@
-@import '../base/variables';
-
-// Contact Area
+@import "../base/variables";
 .contact-area {
-  padding: 60px 0;
-background-color: $bg-color;
-  .contact-form {
-    background-color: $bg-color;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .contact-info {
+    h4 {
+      font-size: 25px;
+      line-height: 30px;
+      position: relative;
 
-    .form-group {
-      margin-bottom: 20px;
+      &:before {
+        content: "";
+        position: absolute;
+        background: $Primary-btn;
+        width: 60px;
+        height: 3px;
+        bottom: -10px;
+      }
+    }
+    p {
+      margin: 30px 0;
+    }
+    .info-item {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      margin: 20px 0;
 
-      .form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #fff;
-        background-color: #333;
+      i {
+        width: 45px;
+        height: 45px;
+        border: 1px solid $Primary-btn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        &:hover {
+          background: $Primary-btn;
+          color: $bg-color;
+          transform: translateY(-5px);
+          box-shadow: 0 0 10px $Primary-btn;
+        }
       }
 
-      .btn-secondary {
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+      a,
+      span {
+        display: inline-block;
+        margin-left: 25px;
+        color: $text-color;
+        font-size: 18px;
+        font-weight: 500;
 
         &:hover {
-          background-color: #2980b9;
+          color: $tomato-color;
+        }
+      }
+      span {
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+    .social-icon {
+      display: flex;
+      margin-top: 4rem;
+
+      a {
+        width: 45px;
+        height: 45px;
+        background: $Primary-btn;
+        color: $bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px; // Added margin value here
+        border-radius: 50%;
+
+        &:hover {
+          transform: translateY(-5px);
+          border-radius: 4px;
+          box-shadow: 0 0 10px $Primary-btn;
         }
       }
     }
   }
 
-  .contact-info {
-    background-color: $bg-color;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .contact-form {
+    @include medium {
+      margin-top: 4rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
 
-    .info-item {
-      margin-bottom: 20px;
+    .form-group.d-flex {
+      gap: 1rem;
+    }
 
-      span {
-        font-size: 16px;
-        color: #fff;
-        border-bottom: 1px solid #ddd;
-        padding: 10px 0;
-        
+    .half-width {
+      width: 48%;
+    }
 
-        a {
-          color: #3498db;
-          text-decoration: none;
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid $dark-color;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+      background-color: transparent;
+      color: $text-color;
+    }
 
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
+    .form-control:focus {
+      border-color: $Primary-btn;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Button Styles */
+    .btn-primary {
+      padding: 0.75rem;
+      background-color: $Primary-btn;
+      color: $bg-color;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 10px $Primary-btn;
     }
   }
 }

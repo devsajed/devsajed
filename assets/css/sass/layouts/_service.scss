@@ -46,6 +46,7 @@
       transition: all 0.35s; // Smooth transition for hover effect
     }
     &:hover {
+      transform: translateY(-5px); // Lifts the element on hover
       &::before {
         animation-play-state: paused; // Pauses the animation on hover
       }
