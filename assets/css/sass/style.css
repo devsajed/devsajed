@@ -2180,4 +2180,16 @@ h3 {
   font-size: 14px;
   color: #FFFFFF;
   opacity: 0.75;
+}
+.footer-area #formResponse,
+.footer-area #formError {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.footer-area #formResponse {
+  color: green;
+}
+.footer-area #formError {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
