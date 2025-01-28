@@ -1,6 +1,6 @@
 @import "../base/variables";
 
-// Preloader 
+// Preloader
 #preloader {
   position: fixed;
   top: 0;
@@ -12,9 +12,9 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  opacity: .9;
+  opacity: 0.9;
 }
-// Scroll to Top Button CSS 
+// Scroll to Top Button CSS
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -45,7 +45,7 @@
     position: relative;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       background: $Primary-btn;
       width: 61px;
@@ -55,19 +55,19 @@
   }
 }
 
-// Contact Button CSS 
+// Contact Button CSS
 .contact-btn {
   background: $Primary-btn;
   color: $bg-color !important;
-  padding: 0.625rem 1.25rem;  // Use rem units for scalability
+  padding: 0.625rem 1.25rem; // Use rem units for scalability
   border-radius: 25px;
-  border: none;               // Optional: remove border for cleaner look
+  border: none; // Optional: remove border for cleaner look
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease; // Added smooth transition
   animation: animated 5s ease-in-out infinite;
   transition: all 1s ease-in-out;
   &:hover {
-    box-shadow: 0 0 10px $Primary-btn;  // Increased shadow for better effect
-    transform: scale(1.05);             // Add subtle scaling for better interaction
+    box-shadow: 0 0 10px $Primary-btn; // Increased shadow for better effect
+    transform: scale(1.05); // Add subtle scaling for better interaction
   }
 }
 
@@ -84,7 +84,6 @@
   }
 }
 
-
 .card {
   position: relative;
   margin: 0 auto;
@@ -93,7 +92,7 @@
 
   &::after,
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: calc(100% + 6px);
     width: calc(100% + 6px);
@@ -102,7 +101,15 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     border-radius: inherit;
-    background-image: conic-gradient(from var(--angle), #d32222, #f39c12, #e74c3c, #9b59b6, #2ecc71, #3498db);
+    background-image: conic-gradient(
+      from var(--angle),
+      #d32222,
+      #f39c12,
+      #e74c3c,
+      #9b59b6,
+      #2ecc71,
+      #3498db
+    );
     animation: spin 3s linear infinite;
   }
 
@@ -111,7 +118,7 @@
     opacity: 0.5;
   }
 }
-  
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;

@@ -1,23 +1,21 @@
-@import '../base/variables';
+@import "../base/variables";
 *,
 *::before,
-*::after{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   border: none;
   outline: none;
-  
 }
 
-a{
+a {
   text-decoration: none;
   transition: 0.3s;
 }
-img{
+img {
   max-width: 100%;
   vertical-align: middle;
   height: auto;
 }
-

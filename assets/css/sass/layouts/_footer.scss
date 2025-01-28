@@ -1,0 +1,91 @@
+@import "../base/variables";
+/* General Footer Styling */
+.footer-area {
+  background-color: $navy-blue;
+  color: $text-color;
+
+  .footer-section {
+    h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: $Primary-btn;
+    }
+
+    ul {
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $text-color;
+
+          &:hover {
+            color: $Primary-btn;
+          }
+        }
+      }
+    }
+    .social-links {
+      a {
+        display: inline-block;
+        margin-right: 10px;
+        color: $text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid $Primary-btn;
+        border-radius: 50%;
+        &:hover {
+          color: $bg-color;
+          background-color: $Primary-btn;
+          box-shadow: 0 0 10px $Primary-btn;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  /* Newsletter Form */
+  .newsletter-form {
+    p {
+      margin: 10px 0;
+    }
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      flex: 1;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: $Primary-btn;
+      border: none;
+      border-radius: 5px;
+      color: $bg-color;
+      cursor: pointer;
+      font-weight: 600;
+
+      &:hover {
+        box-shadow: 0 0 10px $Primary-btn;
+      }
+    }
+  }
+
+  /* Footer Bottom (Copyright) */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $dark-color;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: $text-color;
+      opacity: 0.75;
+    }
+  }
+}

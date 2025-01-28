@@ -15,8 +15,8 @@
   .logo {
     a {
       display: inline-block;
-      font-size: 2rem;
-      line-height: 2.75rem;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
       color: $text-color;
       letter-spacing: 2px;
       font-style: italic;
@@ -30,7 +30,7 @@
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -79,18 +79,17 @@
         transition: all 0.3s ease;
       }
     }
-         &.open .bar:nth-child(1) {
-           transform: rotate(45deg) translate(9px, 9px);
-         }
-    
-         &.open .bar:nth-child(2) {
-           opacity: 0;
-         }
-    
-         &.open .bar:nth-child(3) {
-           transform: rotate(-45deg) translate(5px, -5px);
-         }
+    &.open .bar:nth-child(1) {
+      transform: rotate(45deg) translate(9px, 9px);
+    }
 
+    &.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
 
   .nav-menu {
@@ -101,7 +100,7 @@
       width: 200px;
       padding: 20px;
       transform: translate(0, 20%);
-      background-color: #1f1f1f;
+      background-color: $bg-color;
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
       transition: right 0.3s ease;
       z-index: 9999;
@@ -130,7 +129,8 @@
           transition: color 0.3s ease, transform 0.3s ease;
           padding: 10px 15px;
           border-radius: 5px;
-          transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+          transition: background-color 0.3s ease, color 0.3s ease,
+            transform 0.3s ease;
 
           &:hover {
             background-color: $Primary-btn;

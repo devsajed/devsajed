@@ -119,56 +119,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   // Form Submission with Web3Forms API and Vanilla JavaScript
-   document
-     .getElementById("contactForm")
-     .addEventListener("submit", async function (event) {
-       event.preventDefault(); // Prevent the default form submission
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent the default form submission
 
-       // Form validation (Optional)
-       const firstName = document.getElementById("firstName").value.trim();
-       const lastName = document.getElementById("lastName").value.trim();
-       const email = document.getElementById("email").value.trim();
-       const message = document.getElementById("message").value.trim();
+      // Form validation (Optional)
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-       if (!firstName || !lastName || !email || !message) {
-         document.getElementById("formError").textContent =
-           "Please fill out all the fields.";
-         document.getElementById("formError").style.display = "block";
-         return;
-       }
+      if (!firstName || !lastName || !email || !message) {
+        document.getElementById("formError").textContent =
+          "Please fill out all the fields.";
+        document.getElementById("formError").style.display = "block";
+        return;
+      }
 
-       // Hide previous messages
-       document.getElementById("formResponse").style.display = "none";
-       document.getElementById("formError").style.display = "none";
+      // Hide previous messages
+      document.getElementById("formResponse").style.display = "none";
+      document.getElementById("formError").style.display = "none";
 
-       try {
-         // Simulate form submission to Web3Forms
-         const response = await fetch("https://api.web3forms.com/submit", {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify({
-             access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759",
-             name: `${firstName} ${lastName}`,
-             email: email,
-             message: message,
-           }),
-         });
+      try {
+        // Simulate form submission to Web3Forms
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759",
+            name: `${firstName} ${lastName}`,
+            email: email,
+            message: message,
+          }),
+        });
 
-         if (response.ok) {
-           // Show success message
-           document.getElementById("formResponse").style.display = "block";
-           document.getElementById("contactForm").reset(); // Reset the form
-         } else {
-           throw new Error("Submission failed");
-         }
-       } catch (error) {
-         // Show error message
-         document.getElementById("formError").style.display = "block";
-       }
-     });
- 
+        if (response.ok) {
+          // Show success message
+          document.getElementById("formResponse").style.display = "block";
+          document.getElementById("contactForm").reset(); // Reset the form
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch (error) {
+        // Show error message
+        document.getElementById("formError").style.display = "block";
+      }
+    });
 });

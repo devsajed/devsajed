@@ -1,4 +1,4 @@
-@import '../base/variables';
+@import "../base/variables";
 // Display (Flex & Inline-Flex)
 $flexs: flex, inline-flex;
 
@@ -18,7 +18,8 @@ $directions: row, row-reverse, column, column-reverse;
 }
 
 // Justify Content (flex-start, center, flex-end, space-between, space-around, space-evenly)
-$justifys: flex-start, center, flex-end, space-between, space-around, space-evenly;
+$justifys: flex-start, center, flex-end, space-between, space-around,
+  space-evenly;
 
 @each $justify in $justifys {
   .justify-#{$justify} {

@@ -15,16 +15,16 @@
     margin-bottom: $spacing-unit * $i;
   }
   .mt-#{auto} {
-    margin-top:auto;
+    margin-top: auto;
   }
   .mb-#{auto} {
-    margin-bottom:auto;
+    margin-bottom: auto;
   }
   .ml-#{auto} {
-    margin-left:auto;
+    margin-left: auto;
   }
   .mr-#{auto} {
-    margin-right:auto;
+    margin-right: auto;
   }
   .mt-#{$i} {
     margin-top: $spacing-unit * $i;
@@ -49,24 +49,22 @@
   .px-#{$i} {
     padding-left: $spacing-unit * $i;
     padding-right: $spacing-unit * $i;
-
   }
   .py-#{$i} {
     padding-top: $spacing-unit * $i;
     padding-bottom: $spacing-unit * $i;
-
   }
   .pt-#{auto} {
-    padding-top: auto ;
+    padding-top: auto;
   }
   .pb-#{auto} {
-    padding-bottom: auto ;
+    padding-bottom: auto;
   }
   .pl-#{auto} {
-    padding-left: auto ;
+    padding-left: auto;
   }
   .pr-#{auto} {
-    padding-right: auto ;
+    padding-right: auto;
   }
   .pt-#{$i} {
     padding-top: $spacing-unit * $i;
