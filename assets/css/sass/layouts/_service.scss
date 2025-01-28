@@ -1,6 +1,17 @@
 @import "../base/variables";
 
 .services-area {
+  .color-web-development {
+    --color: #ff6347;
+  }
+
+  .color-web-design {
+    --color: #007bff;
+  }
+
+  .color-wordpress {
+    --color: #ffd700;
+  }
   .service-item {
     position: relative;
     background-color: $dark-blue;

@@ -1852,6 +1852,15 @@ h3 {
 }
 
 /* Margin & Padding Utilities */
+.services-area .color-web-development {
+  --color: #ff6347;
+}
+.services-area .color-web-design {
+  --color: #007bff;
+}
+.services-area .color-wordpress {
+  --color: #ffd700;
+}
 .services-area .service-item {
   position: relative;
   background-color: #1f2b38;
@@ -2100,4 +2109,14 @@ h3 {
 }
 .contact-area .contact-form .btn-primary:hover {
   box-shadow: 0 0 10px #FFD700;
+}
+.contact-area .form-response {
+  margin-top: 1rem;
+  color: #28a745;
+  display: none;
+}
+.contact-area .form-error {
+  margin-top: 1rem;
+  color: #dc3545;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

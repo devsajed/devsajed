@@ -136,4 +136,15 @@
       box-shadow: 0 0 10px $Primary-btn;
     }
   }
+  .form-response {
+    margin-top: 1rem;
+    color: #28a745;
+    display: none;
+  }
+
+  .form-error {
+    margin-top: 1rem;
+    color: #dc3545;
+    display: none;
+  }
 }
