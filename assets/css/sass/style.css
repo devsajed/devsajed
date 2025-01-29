@@ -2181,15 +2181,17 @@ h3 {
   color: #FFFFFF;
   opacity: 0.75;
 }
-.footer-area #formResponse,
-.footer-area #formError {
+.footer-area #subscribeResponse,
+.footer-area #subscribeError {
   margin-top: 15px;
   font-size: 1rem;
   font-weight: 500;
 }
-.footer-area #formResponse {
-  color: green;
+.footer-area #subscribeResponse {
+  color: #28a745;
+  display: none;
 }
-.footer-area #formError {
+.footer-area #subscribeError {
   color: red;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

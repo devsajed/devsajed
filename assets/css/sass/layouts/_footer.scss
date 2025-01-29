@@ -88,21 +88,21 @@
       opacity: 0.75;
     }
   }
-  $success-color: green;
-  $error-color: red;
 
-  #formResponse,
-  #formError {
+  #subscribeResponse,
+  #subscribeError {
     margin-top: 15px;
     font-size: 1rem;
     font-weight: 500;
   }
 
-  #formResponse {
-    color: $success-color;
+  #subscribeResponse {
+    color: $green-color;
+    display: none;
   }
 
-  #formError {
+  #subscribeError {
     color: $error-color;
+    display: none;
   }
 }

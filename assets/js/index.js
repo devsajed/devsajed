@@ -169,65 +169,58 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("formError").style.display = "block";
       }
     });
-  
-  
+
   // newsletterFrom
-    // document
-    //   .getElementById("newsletterForm")
-    //   .addEventListener("submit", async function (event) {
-    //     event.preventDefault(); // Prevent the default form submission
+  document
+    .getElementById("newsletterForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent default form submission
 
-    //     // Get the email input value
-    //     const email = document
-    //       .querySelector('input[name="email"]')
-    //       .value.trim();
+      const emailInput = document.querySelector('input[name="subscribeEmail"]');
+      const subscribeEmail = emailInput.value.trim();
+      const subscribeResponse = document.getElementById("subscribeResponse");
+      const subscribeError = document.getElementById("subscribeError");
 
-    //     // Hide previous messages
-    //     document.getElementById("formResponse").style.display = "none";
-    //     document.getElementById("formError").style.display = "none";
+      // Hide previous messages
+      subscribeResponse.style.display = "none";
+      subscribeError.style.display = "none";
 
-    //     // Check if email is valid
-    //     if (!email) {
-    //       document.getElementById("formError").textContent =
-    //         "Please enter a valid email address.";
-    //       document.getElementById("formError").style.display = "block";
-    //       return;
-    //     }
+      // Email validation regex
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    //     try {
-    //       console.log("Sending data to Web3Forms...");
+      if (!emailPattern.test(subscribeEmail)) {
+        subscribeError.textContent = "Please enter a valid email address.";
+        subscribeError.style.display = "block";
+        return;
+      }
 
-    //       // Submit the form data to Web3Forms using fetch
-    //       const response = await fetch("https://api.web3forms.com/submit", {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({
-    //           access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759", // Your API Key
-    //           email: email,
-    //         }),
-    //       });
+      try {
+        console.log("Sending data to Web3Forms...");
 
-    //       console.log("Response received: ", response);
+        // Submit the form data to Web3Forms using fetch
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759", // API Key
+            email: email,
+          }),
+        });
 
-    //       if (response.ok) {
-    //         // Show success message
-    //         document.getElementById("formResponse").style.display = "block";
-    //         document.getElementById("newsletterForm").reset(); // Reset the form
-    //       } else {
-    //         throw new Error("Submission failed");
-    //       }
-    //     } catch (error) {
-    //       console.error("Error: ", error); // Log any error to the console
-    //       document.getElementById("formError").textContent =
-    //         "There was an error. Please try again later.";
-    //       document.getElementById("formError").style.display = "block";
-    //     }
-    //   });
+        console.log("Response received: ", response);
 
-
-  
-   
-
+        if (response.ok) {
+          subscribeResponse.textContent = "Thank you for subscribing!";
+          subscribeResponse.style.display = "block";
+          emailInput.value = ""; // Reset email input
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch (error) {
+        console.error("Error: ", error);
+        subscribeError.textContent =
+          "There was an error. Please try again later.";
+        subscribeError.style.display = "block";
+      }
+    });
 });
