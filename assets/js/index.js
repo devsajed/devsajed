@@ -172,59 +172,59 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
   // newsletterFrom
-    document
-      .getElementById("newsletterForm")
-      .addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent the default form submission
+    // document
+    //   .getElementById("newsletterForm")
+    //   .addEventListener("submit", async function (event) {
+    //     event.preventDefault(); // Prevent the default form submission
 
-        // Get the email input value
-        const email = document
-          .querySelector('input[name="email"]')
-          .value.trim();
+    //     // Get the email input value
+    //     const email = document
+    //       .querySelector('input[name="email"]')
+    //       .value.trim();
 
-        // Hide previous messages
-        document.getElementById("formResponse").style.display = "none";
-        document.getElementById("formError").style.display = "none";
+    //     // Hide previous messages
+    //     document.getElementById("formResponse").style.display = "none";
+    //     document.getElementById("formError").style.display = "none";
 
-        // Check if email is valid
-        if (!email) {
-          document.getElementById("formError").textContent =
-            "Please enter a valid email address.";
-          document.getElementById("formError").style.display = "block";
-          return;
-        }
+    //     // Check if email is valid
+    //     if (!email) {
+    //       document.getElementById("formError").textContent =
+    //         "Please enter a valid email address.";
+    //       document.getElementById("formError").style.display = "block";
+    //       return;
+    //     }
 
-        try {
-          console.log("Sending data to Web3Forms...");
+    //     try {
+    //       console.log("Sending data to Web3Forms...");
 
-          // Submit the form data to Web3Forms using fetch
-          const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759", // Your API Key
-              email: email,
-            }),
-          });
+    //       // Submit the form data to Web3Forms using fetch
+    //       const response = await fetch("https://api.web3forms.com/submit", {
+    //         method: "POST",
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({
+    //           access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759", // Your API Key
+    //           email: email,
+    //         }),
+    //       });
 
-          console.log("Response received: ", response);
+    //       console.log("Response received: ", response);
 
-          if (response.ok) {
-            // Show success message
-            document.getElementById("formResponse").style.display = "block";
-            document.getElementById("newsletterForm").reset(); // Reset the form
-          } else {
-            throw new Error("Submission failed");
-          }
-        } catch (error) {
-          console.error("Error: ", error); // Log any error to the console
-          document.getElementById("formError").textContent =
-            "There was an error. Please try again later.";
-          document.getElementById("formError").style.display = "block";
-        }
-      });
+    //       if (response.ok) {
+    //         // Show success message
+    //         document.getElementById("formResponse").style.display = "block";
+    //         document.getElementById("newsletterForm").reset(); // Reset the form
+    //       } else {
+    //         throw new Error("Submission failed");
+    //       }
+    //     } catch (error) {
+    //       console.error("Error: ", error); // Log any error to the console
+    //       document.getElementById("formError").textContent =
+    //         "There was an error. Please try again later.";
+    //       document.getElementById("formError").style.display = "block";
+    //     }
+    //   });
 
 
   
