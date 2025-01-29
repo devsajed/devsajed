@@ -1,461 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Sajedul Islam | Frontend & WordPress Developer</title>
 
-  <!-- Title of the webpage -->
-  <title>Sajedul Islam | Frontend & WordPress Developer</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Devsajed is a professional web developer with expertise in front-end development, web design, and coding. Explore my portfolio showcasing web projects, skills, and technologies."
+    />
+    <meta
+      name="keywords"
+      content="web developer, portfolio, front-end development, HTML, CSS, JavaScript, Sass, GitHub, coding, web design"
+    />
+    <meta name="author" content="Devsajed" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Devsajed is a professional web developer with expertise in front-end development, web design, and coding. Explore my portfolio showcasing web projects, skills, and technologies.">
-  <meta name="keywords"
-    content="web developer, portfolio, front-end development, HTML, CSS, JavaScript, Sass, GitHub, coding, web design">
-  <meta name="author" content="Devsajed">
+    <!-- Social Media Meta Tags (Open Graph / Twitter Cards) -->
+    <meta property="og:title" content="Devsajed - Web Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design."
+    />
+    <meta property="og:image" content="assets/icon-devsajed.png" />
+    <meta property="og:url" content="https://www.devsajed.com" />
+    <meta property="og:type" content="website" />
 
-  <!-- Social Media Meta Tags (Open Graph / Twitter Cards) -->
-  <meta property="og:title" content="Devsajed - Web Developer Portfolio">
-  <meta property="og:description"
-    content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design.">
-  <meta property="og:image" content="assets//icon-devsajed.png">
-  <meta property="og:url" content="https://www.devsajed.com">
-  <meta property="og:type" content="website">
+    <!-- Twitter Cards Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Devsajed - Web Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design."
+    />
+    <meta name="twitter:image" content="assets/icon-devsajed.png" />
+    <meta name="twitter:creator" content="@Devsajed" />
 
-  <!-- Twitter Cards Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Devsajed - Web Developer Portfolio">
-  <meta name="twitter:description"
-    content="Explore the professional portfolio of Devsajed, a skilled web developer specializing in front-end development and web design.">
-  <meta name="twitter:image" content="assets//icon-devsajed.png">
-  <meta name="twitter:creator" content="@Devsajed">
+    <!-- Link to Favicon -->
+    <link rel="icon" href="assets/img/icon-img/icon-devsajed.png" />
 
-  <!-- Link to Favicon -->
-  <link rel="icon" href="assets/img/icon-img/icon-devsajed.png">
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/css/plugins/font-awesome/css/fontawsome.min.css"
+    />
 
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="assets/css/plugins/font-awesome/css/fontawsome.min.css">
+    <!-- Main CSS (Sass compiled) -->
+    <link rel="stylesheet" href="assets/css/sass/style.css" />
 
-  <!-- Main CSS (Sass compiled) -->
-  <link rel="stylesheet" href="assets/css/sass/style.css">
+    <!-- Additional Meta Tags (Optional) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="index, follow" />
+  </head>
 
-  <!-- Additional Meta Tags (Optional) -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="index, follow">
-</head>
+  <body>
+    <!-- preloader  -->
+    <div id="preloader"></div>
+    <!-- /preloader  -->
 
-<body>
-  <!-- preloader  -->
-  <div id="preloader"></div>
-  <!-- /preloader  -->
-
-  <!-- Header Area -->
-  <header class="header-area py-1">
-    <div class="container">
-      <div class="row align-center">
-        <div class="col-md-3">
-          <h3 class="logo">
-            <a href="index.html" class="fw-700 text-uppercase">sajed.</a>
-          </h3>
-        </div>
-        <div class="col-md-9">
-          <!-- Hamburger Menu -->
-          <div class="hamburger-menu" id="hamburger-menu" aria-label="Menu" role="button" tabindex="0">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-          <!-- Nav Menu  -->
-          <nav class="nav-menu" id="nav-menu">
-            <ul class="menu d-flex justify-flex-end align-center">
-              <li class="ml-3"><a href="index.html" class="text-capitalize fw-500" aria-current="page">home</a></li>
-              <li class="ml-3"><a href="#about" class="text-capitalize fw-500">about me</a></li>
-              <li class="ml-3"><a href="#service" class="text-capitalize fw-500">services</a></li>
-              <li class="ml-3"><a href="#portfolio" class="text-capitalize fw-500">portfolio</a></li>
-              <li class="ml-10"><a href="#contact" class="text-capitalize fw-500 contact-btn">say hello</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- /Header Area -->
-
-  <!-- Main Area  -->
-  <main>
-    <!-- Hero Area  -->
-    <section id="home" class="hero-area py-5 ">
+    <!-- Header Area -->
+    <header class="header-area py-1">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 justify-center align-center d-flex">
-            <div class="hero text-center ">
-              <div class="hero-img ">
-                <img src="assets/img/profile-img/profile-img.jpg" alt="Hero Image" loading="lazy">
-              </div>
-              <div class="hero-content">
-                <div class="hero-title text-center">
-                  <span>hello, my name is</span>
-                  <h1 class="text-capitalize fw-700 ">Sajedul Islam</h1>
-                </div>
-                <div class="type-writer">
-                  <h1>I'm <span id="typewriter-text" class="typewriter-role"></span></h1>
-                </div>
-                <a href="#contact" class=" btn-secondary text-capitalize fw-700">hire Me</a>
-                <a href="assets/img/Resume/SajedulIslamResume.pdf" class="outline-btn text-capitalize fw-700"
-                  download="SajedulIslamResume.pdf">resume <i class="fa-solid fa-download"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Hero Area  -->
-
-    <!-- About Area  -->
-
-    <section id="about" class="about-area py-6">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 ">
-            <div class="section-title pt-3 pb-5">
-              <h4 class="text-capitalize fw-700">about me</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row align-flex-start">
-          <div class="col-12 col-sm-12 col-md-8">
-            <div class="about-content">
-              <span class="text-capitalize fw-500">my name is</span>
-              <h2 class="text-capitalize fw-700">Sajedul Islam</h2>
-              <p class=" fw-500">"I am a results-driven web developer specializing in front-end development, responsive
-                design, and intuitive user
-                experiences. With expertise in HTML, CSS, JavaScript, Sass, and GitHub, I build high-quality, scalable,
-                and user-focused
-                websites. I also have extensive experience in WordPress development, crafting custom themes that align
-                with brand
-                identities and business objectives. Passionate about continuous learning, I stay ahead of industry
-                trends and leverage
-                modern technologies to create innovative, future-ready solutions that exceed client expectations."</p>
-              <p>This keeps all your key points while making it more refined and engaging. Let me know if you'd like any
-                further tweaks!
-                🚀</p>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-4">
-            <div class="about-info">
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Email:</span>
-                <span><a href="mailto:devsajed65@gmail.com" class=" fw-500">devsajed65@gmail.com</a> </span>
-              </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Phone:</span>
-                <span><a href="tel:+8801791457908 " class=" fw-500">+880 179 145 7908</a></span>
-              </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">linkdin:</span>
-                <span><a href=" #" class=" fw-500" target="_blank">sajed islam</a></span>
-              </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">website:</span>
-                <span><a rel="noopener" aria-label="portfolio website" title="portfolio"
-                    href="https://devsajed.github.io/devsajed/ " target="_blank"
-                    class=" fw-500">www.devsajed.com</a></span>
-              </div>
-              <div class="info-item">
-                <span class="text-capitalize fw-700">Location:</span>
-                <span>Sylhet, Bangladesh</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /About Area  -->
-
-
-    <!-- services Area  -->
-    <section id="service" class="services-area py-6">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 ">
-            <div class="section-title pt-3 pb-5 ">
-              <h4 class="text-capitalize fw-700">services</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 ">
-            <div class="service-item color-web-development">
-              <div class="service-icon">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <div class="service-content">
-                <h4 class="text-capitalize fw-600">web development</h4>
-                <p class="fw-500">I create responsive websites and web applications that provide users with a seamless
-                  experience across all devices.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 ">
-            <div class="service-item color-web-design">
-              <div class="service-icon">
-                <i class="fa-solid fa-palette"></i>
-              </div>
-              <div class="service-content">
-                <h4 class="text-capitalize fw-700">web design</h4>
-                <p class="fw-500">I design visually appealing websites that reflect brand identities and engage users
-                  through
-                  intuitive interfaces.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 ">
-            <div class="service-item color-wordpress">
-              <div class="service-icon">
-                <i class="fa-brands fa-wordpress"></i>
-              </div>
-              <div class="service-content">
-                <h4 class="text-capitalize fw-700">wordpress</h4>
-                <p class="fw-500">I specialize in WordPress development, creating custom themes and plugins for brands
-                  and
-                  businesses.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /services Area  -->
-
-    <!-- Portfolio Area -->
-    <section id="portfolio" class="portfolio-area py-6">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 ">
-            <div class="section-title pt-3 pb-5">
-              <h4 class="text-capitalize fw-700">portfolio</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="portfolio-card">
-              <img src="assets/img/projects/novena-hospital.png" loading="lazy" alt="novena-hospital">
-              <div class="overlay">
-                <h3>Hospital Project</h3>
-                <a rel="noopener" href="#" target="_blank" title="visit site" class="icon-link">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="portfolio-card">
-              <img src="assets/img/projects/backend-2.jpg" loading="lazy" alt="novena-hospital">
-              <div class="overlay">
-                <h3>Hospital Project</h3>
-                <a rel="noopener" href="#" target="_blank" title="visit site" class="icon-link">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="portfolio-card">
-              <img src="assets/img/projects/hotel.png" loading="lazy" alt="novena-hospital">
-              <div class="overlay">
-                <h3>Hotel Project</h3>
-                <a rel="noopener" href="#" target="_blank" title="visit site" class="icon-link">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="portfolio-card">
-              <img src="assets/img/projects/backend-3.jpg" loading="lazy" alt="novena-hospital">
-              <div class="overlay">
-                <h3>Hospital Project</h3>
-                <a rel="noopener" href="#" target="_blank" title="visit site" class="icon-link">
-                  <i class="fa-solid fa-link"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Portfolio Area  -->
-
-    <!-- Contact Area  -->
-    <section id="contact" class="contact-area py-6">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12">
-            <div class="section-title pt-3 pb-5">
-              <h4 class="text-capitalize fw-700">contact me</h4>
-            </div>
-          </div>
-        </div>
-
         <div class="row align-center">
-          <div class="col-12 col-sm-6 ">
-            <div class="contact-info">
-              <h4>Get In Touch</h4>
-              <p>Feel free to reach out to me with any questions, comments, or project inquiries. I'm always happy to
-                connect and discuss new opportunities.</p>
-              <div class="info-item ">
-                <i class="fa-solid fa-phone "></i>
-                <a href="#" aria-label="phone" class=" fw-500">+88017914-57908</a>
-              </div>
-              <div class="info-item ">
-                <i class="fa-solid fa-envelope "></i>
-                <a href="#" aria-label="email" class=" fw-500">devsajed65gmail.com</a>
-              </div>
-              <div class="info-item ">
-                <i class="fa-solid fa-location-dot "></i>
-                <span class="text-capitalize">sylhet,bangladesh.</span>
-              </div>
-            </div>
+          <div class="col-md-3">
+            <h3 class="logo">
+              <a href="index.html" class="fw-700 text-uppercase">sajed.</a>
+            </h3>
           </div>
-          <div class="col-12 col-sm-6 ">
-            <div class="contact-form">
-              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759">
-                <div class="form-group d-flex">
-                  <input type="text" name='first_name' id="firstName" class="form-control half-width "
-                    placeholder="First Name" required>
-                  <input type="text" name='last_name' id="lastName" class="form-control half-width"
-                    placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" id="email" name="email" class="form-control " placeholder="Your Email" required>
-                </div>
-                <div class="form-group ">
-                  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your Message"
-                    required></textarea>
-                </div>
-                <button type="submit" class="btn-primary text-capitalize fw-700">send message</button>
-              </form>
-              <!-- Success and Error Messages -->
-              <div id="formResponse" class="form-response">
-                Thank you for your message! We will get back to you soon.
-              </div>
-              <div id="formError" class="form-error">
-                Oops! Something went wrong. Please try again later.
-              </div>
+          <div class="col-md-9">
+            <!-- Hamburger Menu -->
+            <div
+              class="hamburger-menu"
+              id="hamburger-menu"
+              aria-label="Menu"
+              role="button"
+              tabindex="0"
+            >
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </div>
+            <!-- Nav Menu  -->
+            <nav class="nav-menu" id="nav-menu">
+              <ul class="menu d-flex justify-flex-end align-center">
+                <li class="ml-3">
+                  <a
+                    href="index.html"
+                    class="text-capitalize fw-500"
+                    aria-current="page"
+                    >home</a
+                  >
+                </li>
+                <li class="ml-3">
+                  <a href="#about" class="text-capitalize fw-500">about me</a>
+                </li>
+                <li class="ml-3">
+                  <a href="#service" class="text-capitalize fw-500">services</a>
+                </li>
+                <li class="ml-3">
+                  <a href="#portfolio" class="text-capitalize fw-500"
+                    >portfolio</a
+                  >
+                </li>
+                <li class="ml-10">
+                  <a href="#contact" class="text-capitalize fw-500 contact-btn"
+                    >say hello</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /Contact Area  -->
-  </main>
-  <!-- /Main Area  -->
+    </header>
+    <!-- /Header Area -->
 
-  <!-- Footer Area  -->
-  <footer class="footer-area pt-5">
-    <div class="container">
-      <div class="row">
-        <!-- Quick Links Section -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#service">Services</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Resources Section -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Contact Information Section -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="footer-section">
-            <h4>Contact Information</h4>
-            <ul>
-              <li><strong>Address:</strong> 123 Main Street, Sylhet, Bangladesh, 3100</li>
-              <li><strong>Phone:</strong> +88(017) 9145-7908</li>
-              <li><strong>Email:</strong> devsajed65@gmail.com</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Social Media Section -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <div class="footer-section ">
-            <h4>Follow Us</h4>
-            <ul class="social-links d-flex align-items-center align-center">
-              <li><a href="#" aria-label="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="#" aria-label="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-              <li><a href="#" aria-label="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="#" aria-label="github" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Newsletter Section -->
-        <div class="col-12 col-sm-12 col-md-4">
-          <div class="footer-section ">
-            <div class="newsletter-form">
-              <h4>Newsletter</h4>
-              <p>Subscribe to our newsletter to receive the latest news, updates, and special offers.</p>
-              <form id="newsletterForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759">
-                <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-              </form>
-              <!-- Success and error messages -->
-              <div id="subscribeResponse" class="subscribe-response">
-                Thank you for subscribing!
-              </div>
-              <div id="subscribeError" class="subscribe-error">
-                Please enter a valid email address.
+    <!-- Main Area  -->
+    <main>
+      <!-- Hero Area  -->
+      <section id="home" class="hero-area py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 justify-center align-center d-flex">
+              <div class="hero text-center">
+                <div class="hero-img">
+                  <img
+                    src="assets/img/profile-img/profile-img.jpg"
+                    alt="Hero Image"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-content">
+                  <div class="hero-title text-center">
+                    <span>hello, my name is</span>
+                    <h1 class="text-capitalize fw-700">Sajedul Islam</h1>
+                  </div>
+                  <div class="type-writer">
+                    <h1>
+                      I'm
+                      <span id="typewriter-text" class="typewriter-role"></span>
+                    </h1>
+                  </div>
+                  <a
+                    href="#contact"
+                    class="btn-secondary text-capitalize fw-700"
+                    >hire Me</a
+                  >
+                  <a
+                    href="assets/img/Resume/SajedulIslamResume.pdf"
+                    class="outline-btn text-capitalize fw-700"
+                    download
+                    >resume <i class="fa-solid fa-download"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- /Hero Area  -->
+
+      <!-- About Area  -->
+
+      <section id="about" class="about-area py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title pt-3 pb-5">
+                <h4 class="text-capitalize fw-700">about me</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-flex-start">
+            <div class="col-12 col-sm-12 col-md-8">
+              <div class="about-content">
+                <span class="text-capitalize fw-500">my name is</span>
+                <h2 class="text-capitalize fw-700">Sajedul Islam</h2>
+                <p class="fw-500">
+                  I am a results-driven web developer specializing in front-end
+                  development, responsive design, and intuitive user
+                  experiences. With expertise in HTML, CSS, JavaScript, Sass,
+                  and GitHub, I build high-quality, scalable, and user-focused
+                  websites. I also have extensive experience in WordPress
+                  development, crafting custom themes that align with brand
+                  identities and business objectives. Passionate about
+                  continuous learning, I stay ahead of industry trends and
+                  leverage modern technologies to create innovative,
+                  future-ready solutions that exceed client expectations.
+                </p>
+                <p>
+                  This keeps all your key points while making it more refined
+                  and engaging. Let me know if you'd like any further tweaks! 🚀
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4">
+              <div class="about-info">
+                <div class="info-item">
+                  <span class="text-capitalize fw-700">Email:</span>
+                  <span
+                    ><a href="mailto:devsajed65@gmail.com" class="fw-500"
+                      >devsajed65@gmail.com</a
+                    >
+                  </span>
+                </div>
+                <div class="info-item">
+                  <span class="text-capitalize fw-700">Phone:</span>
+                  <span
+                    ><a href="tel:+8801791457908" class="fw-500"
+                      >+880 179 145 7908</a
+                    ></span
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="text-capitalize fw-700">LinkedIn:</span>
+                  <span
+                    ><a href=" #" class="fw-500" target="_blank"
+                      >sajed islam</a
+                    ></span
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="text-capitalize fw-700">website:</span>
+                  <span
+                    ><a
+                      rel="noopener"
+                      aria-label="portfolio website"
+                      title="portfolio"
+                      href="https://devsajed.github.io/devsajed/ "
+                      target="_blank"
+                      class="fw-500"
+                      >www.devsajed.com</a
+                    ></span
+                  >
+                </div>
+                <div class="info-item">
+                  <span class="text-capitalize fw-700">Location:</span>
+                  <span>Sylhet, Bangladesh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Area  -->
+
+      <!-- services Area  -->
+      <section id="service" class="services-area py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title pt-3 pb-5">
+                <h4 class="text-capitalize fw-700">services</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="service-item color-web-development">
+                <div class="service-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="text-capitalize fw-600">web development</h4>
+                  <p class="fw-500">
+                    I create responsive websites and web applications that
+                    provide users with a seamless experience across all devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="service-item color-web-design">
+                <div class="service-icon">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="text-capitalize fw-700">web design</h4>
+                  <p class="fw-500">
+                    I design visually appealing websites that reflect brand
+                    identities and engage users through intuitive interfaces.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="service-item color-wordpress">
+                <div class="service-icon">
+                  <i class="fa-brands fa-wordpress"></i>
+                </div>
+                <div class="service-content">
+                  <h4 class="text-capitalize fw-700">wordpress</h4>
+                  <p class="fw-500">
+                    I specialize in WordPress development, creating custom
+                    themes and plugins for brands and businesses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /services Area  -->
+
+      <!-- Portfolio Area -->
+      <section id="portfolio" class="portfolio-area py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title pt-3 pb-5">
+                <h4 class="text-capitalize fw-700">portfolio</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="portfolio-card">
+                <img
+                  src="assets/img/projects/novena-hospital.png"
+                  loading="lazy"
+                  alt="novena-hospital"
+                />
+                <div class="overlay">
+                  <h3>Hospital Project</h3>
+                  <a
+                    rel="noopener"
+                    href="#"
+                    target="_blank"
+                    title="visit site"
+                    class="icon-link"
+                  >
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="portfolio-card">
+                <img
+                  src="assets/img/projects/backend-2.jpg"
+                  loading="lazy"
+                  alt="novena-hospital"
+                />
+                <div class="overlay">
+                  <h3>Hospital Project</h3>
+                  <a
+                    rel="noopener"
+                    href="#"
+                    target="_blank"
+                    title="visit site"
+                    class="icon-link"
+                  >
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="portfolio-card">
+                <img
+                  src="assets/img/projects/hotel.png"
+                  loading="lazy"
+                  alt="novena-hospital"
+                />
+                <div class="overlay">
+                  <h3>Hotel Project</h3>
+                  <a
+                    rel="noopener"
+                    href="#"
+                    target="_blank"
+                    title="visit site"
+                    class="icon-link"
+                  >
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="portfolio-card">
+                <img
+                  src="assets/img/projects/backend-3.jpg"
+                  loading="lazy"
+                  alt="novena-hospital"
+                />
+                <div class="overlay">
+                  <h3>Hospital Project</h3>
+                  <a
+                    rel="noopener"
+                    href="#"
+                    target="_blank"
+                    title="visit site"
+                    class="icon-link"
+                  >
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Area  -->
+
+      <!-- Contact Area  -->
+      <section id="contact" class="contact-area py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12">
+              <div class="section-title pt-3 pb-5">
+                <h4 class="text-capitalize fw-700">contact me</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-center">
+            <div class="col-12 col-sm-6">
+              <div class="contact-info">
+                <h4>Get In Touch</h4>
+                <p>
+                  Feel free to reach out to me with any questions, comments, or
+                  project inquiries. I'm always happy to connect and discuss new
+                  opportunities.
+                </p>
+                <div class="info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+8801791457908" aria-label="phone" class="fw-500"
+                    >+88017914-57908</a
+                  >
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a
+                    href="mailto:devsajed65@gmail.com"
+                    aria-label="email"
+                    class="fw-500"
+                    >devsajed65gmail.com</a
+                  >
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span class="text-capitalize">sylhet,bangladesh.</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="contact-form">
+                <form
+                  id="contactForm"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759"
+                  />
+                  <div class="form-group d-flex">
+                    <input
+                      type="text"
+                      name="first_name"
+                      id="firstName"
+                      class="form-control half-width"
+                      placeholder="First Name"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="lastName"
+                      class="form-control half-width"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      id="message"
+                      rows="5"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-primary text-capitalize fw-700"
+                  >
+                    send message
+                  </button>
+                </form>
+                <!-- Success and Error Messages -->
+                <div id="formResponse" class="form-response">
+                  Thank you for your message! We will get back to you soon.
+                </div>
+                <div id="formError" class="form-error">
+                  Oops! Something went wrong. Please try again later.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Area  -->
+    </main>
+    <!-- /Main Area  -->
+
+    <!-- Footer Area  -->
+    <footer class="footer-area pt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Quick Links Section -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Resources Section -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-section">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Information Section -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-section">
+              <h4>Contact Information</h4>
+              <ul>
+                <li>
+                  <strong>Address:</strong> 123 Main Street, Sylhet, Bangladesh,
+                  3100
+                </li>
+                <li><strong>Phone:</strong> +88(017) 9145-7908</li>
+                <li><strong>Email:</strong> devsajed65@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-section">
+              <h4>Follow Us</h4>
+              <ul class="social-links d-flex align-items-center align-center">
+                <li>
+                  <a
+                    href="https://www.facebook.com/sajed.islam.150492"
+                    rel="noopener"
+                    aria-label="facebook"
+                    target="_blank"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" aria-label="twitter" target="_blank"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/sajedul-islam-52b01627b/"
+                    rel="noopener"
+                    aria-label="linkedin"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/devsajed"
+                    rel="noopener"
+                    aria-label="github"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="col-12 col-sm-12 col-md-4">
+            <div class="footer-section">
+              <div class="newsletter-form">
+                <h4>Newsletter</h4>
+                <p>
+                  Subscribe to our newsletter to receive the latest news,
+                  updates, and special offers.
+                </p>
+                <form
+                  id="newsletterForm"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759"
+                  />
+                  <input
+                    type="email"
+                    id="subscribeEmail"
+                    name="subscribeEmail"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <button type="submit">Subscribe</button>
+                </form>
+                <!-- Success and error messages -->
+                <div id="subscribeResponse" class="subscribe-response">
+                  Thank you for subscribing!
+                </div>
+                <div id="subscribeError" class="subscribe-error">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom text-center py-3">
+          <p>&copy; 2025 devsajed. All rights reserved.</p>
+        </div>
       </div>
+    </footer>
+    <!-- /Footer Area  -->
 
-      <!-- Copyright Section -->
-      <div class="footer-bottom text-center py-3">
-        <p>&copy; 2025 devsajed. All rights reserved.</p>
-      </div>
-  </footer>
-  <!-- /Footer Area  -->
+    <!-- Scroll to Top Button -->
+    <a
+      aria-label="Scroll top"
+      title="Scroll Top"
+      id="scroll-to-top"
+      class="scroll-to-top"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <!-- /Scroll to Top Button -->
 
-  <!-- Scroll to Top Button -->
-  <a aria-label="Scroll top" title="Scroll Top" id="scroll-to-top" class="scroll-to-top">
-    <i class="fa-solid fa-angle-up"></i>
-  </a>
-  <!-- /Scroll to Top Button -->
-
-  <!-- Main js  -->
-  <script src="assets/js/index.js"></script>
-</body>
-
+    <!-- Main js  -->
+    <script src="assets/js/index.js"></script>
+  </body>
 </html>
