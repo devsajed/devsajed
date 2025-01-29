@@ -71,6 +71,9 @@
       &:hover {
         box-shadow: 0 0 10px $Primary-btn;
       }
+      @include x-small{
+        margin-top: 6px;
+      }
     }
   }
 

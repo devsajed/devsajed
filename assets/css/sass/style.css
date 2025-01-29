@@ -2173,6 +2173,11 @@ h3 {
 .footer-area .newsletter-form button:hover {
   box-shadow: 0 0 10px #f1c40f;
 }
+@media (max-width: 575.95px) {
+  .footer-area .newsletter-form button {
+    margin-top: 6px;
+  }
+}
 .footer-area .footer-bottom {
   text-align: center;
   margin-top: 20px;
