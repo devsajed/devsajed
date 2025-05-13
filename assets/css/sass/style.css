@@ -79,14 +79,15 @@ img {
 }
 
 .contact-btn {
+  font-size: 18px;
   background: #f1c40f;
   color: #1F1F1F !important;
   padding: 0.625rem 1.25rem;
-  border-radius: 25px;
+  border-radius: 20px;
   border: none;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
   animation: animated 5s ease-in-out infinite;
-  transition: all 1s ease-in-out;
+  transition: background-color 0.3s ease;;
 }
 .contact-btn:hover {
   box-shadow: 0 0 10px #f1c40f;
