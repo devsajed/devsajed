@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759",
+            access_key: "6971112a-285c-41a8-b1b9-f599ebfab708",
             name: `${firstName} ${lastName}`,
             email: email,
             message: message,
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            access_key: "ab4e5c1f-7d99-4bac-b4fa-8dc86bd7d759", // API Key
+            access_key: "6971112a-285c-41a8-b1b9-f599ebfab708", // API Key
             email: email,
           }),
         });
@@ -224,3 +224,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 });
+
+// Jvascript End 
