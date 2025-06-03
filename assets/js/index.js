@@ -223,6 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
         subscribeError.style.display = "block";
       }
     });
+  // Copywrite text 
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
 });
 
 // Jvascript End 
+
